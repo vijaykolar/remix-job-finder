@@ -23,7 +23,7 @@ export async function loader() {
   const data = await res.json();
   return json(data);
 }
-`
+
 // export async function action({ request }) {
 //   const formData = await request.formData();
 //   console.log(formData);
@@ -32,4 +32,4 @@ export async function loader() {
 //     success: true,
 //     formData: Object.fromEntries(formData),
 //   });
-// }`;
+// };
