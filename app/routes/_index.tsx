@@ -1,5 +1,6 @@
 import { json, type MetaFunction } from "@remix-run/node";
 import ComponentX from "~/components";
+import { Button } from "~/components/ui/button";
 
 export const meta: MetaFunction = () => {
   return [
@@ -12,8 +13,11 @@ export default function Index() {
   // const formData = useLoaderData<typeof loader>();
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to Remix</h1>
+      <h1 className="text-5xl text-green-500">Welcome to Remix</h1>
       <ComponentX />
+      <Button variant="destructive">Delete</Button>
+
+      <Button>Submit</Button>
     </div>
   );
 }
