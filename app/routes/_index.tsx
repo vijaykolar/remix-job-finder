@@ -1,5 +1,6 @@
 import { json, type MetaFunction } from "@remix-run/node";
-import ComponentX from "~/components";
+
+import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
 import { Button } from "~/components/ui/button";
 
 export const meta: MetaFunction = () => {
@@ -12,18 +13,29 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   // const formData = useLoaderData<typeof loader>();
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+    <div className="container mt-5">
       <h1 className="text-5xl text-green-500">Welcome to Remix</h1>
-      <ComponentX />
-      <Button variant="destructive">Delete</Button>
 
-      <Button size="sm">Submit</Button>
-      <Button size="sm" variant="ghost">
-        ghost
-      </Button>
-      <Button variant="secondary" size="sm">
-        Submit
-      </Button>
+      <div className="flex gap-4">
+        <Button onClick={() => alert(1)} variant="destructive">
+          Delete
+        </Button>
+
+        <Button size="sm">Submit</Button>
+        <Button size="lg">ghost</Button>
+        <Button>Submit ddd</Button>
+      </div>
+
+      <div className="flex gap-4">
+        <Avatar size="xl">
+          <AvatarImage src="https://mighty.tools/mockmind-api/content/human/68.jpg" />
+          <AvatarFallback>VK</AvatarFallback>
+        </Avatar>
+        <Avatar size="xl">
+          <AvatarImage src="https://mighty.tools/mockmind-api/content/human/68.jpg" />
+          <AvatarFallback>VK</AvatarFallback>
+        </Avatar>
+      </div>
     </div>
   );
 }
