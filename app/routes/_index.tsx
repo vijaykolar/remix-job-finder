@@ -17,7 +17,7 @@ export default function Index() {
       <ComponentX />
       <Button variant="destructive">Delete</Button>
 
-      <Button>Submit</Button>
+      <Button size="sm">Submit</Button>
     </div>
   );
 }
