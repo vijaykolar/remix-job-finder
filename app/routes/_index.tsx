@@ -18,6 +18,12 @@ export default function Index() {
       <Button variant="destructive">Delete</Button>
 
       <Button size="sm">Submit</Button>
+      <Button size="sm" variant="ghost">
+        ghost
+      </Button>
+      <Button variant="secondary" size="sm">
+        Submit
+      </Button>
     </div>
   );
 }
