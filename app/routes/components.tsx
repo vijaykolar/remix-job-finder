@@ -39,6 +39,7 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card/card";
+import { TextField } from "~/components/ui/textfield/textfiled";
 
 export const meta: MetaFunction = () => {
   return [
@@ -52,7 +53,17 @@ export default function Index() {
   return (
     <div className="container mt-5">
       <h1 className="text-5xl text-primary mb-5">Welcome to Remix</h1>
-      <div className="grid grid-cols-4 gap-3">
+      <div className="w-96">
+        <TextField
+          iconLeft={<EnvelopeOpenIcon />}
+          iconRight={<ChevronRightIcon />}
+          className="px-10"
+          onChange={() => {
+            console.log(1);
+          }}
+        />
+      </div>
+      <div className="grid grid-cols-4 gap-3 mt-5">
         <Card>
           <CardHeader>
             <CardTitle size="2xl">Heading/Title</CardTitle>
@@ -231,7 +242,7 @@ export default function Index() {
       </div>
       <div className="mt-5 text-center">
         <DropdownMenu>
-          <DropdownMenuTrigger>
+          <DropdownMenuTrigger asChild>
             <Button variant="outline">Open</Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
