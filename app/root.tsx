@@ -10,6 +10,7 @@ import {
 } from "@remix-run/react";
 
 import globalStyles from "./globals.css";
+import { Header } from "./components/header";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -27,6 +28,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
