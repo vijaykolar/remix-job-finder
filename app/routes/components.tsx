@@ -31,6 +31,14 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "~/components/ui/dropdown/dropdown";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "~/components/ui/card/card";
 
 export const meta: MetaFunction = () => {
   return [
@@ -43,9 +51,54 @@ export default function Index() {
   // const formData = useLoaderData<typeof loader>();
   return (
     <div className="container mt-5">
-      <h1 className="text-5xl text-green-500">Welcome to Remix</h1>
+      <h1 className="text-5xl text-primary mb-5">Welcome to Remix</h1>
+      <div className="grid grid-cols-4 gap-3">
+        <Card>
+          <CardHeader>
+            <CardTitle size="2xl">Heading/Title</CardTitle>
+          </CardHeader>
+          <CardContent className="borde">
+            <CardDescription>
+              Here at Microsoft, we are a passionate, fun-loving, growing team.
+              We are looking for passionate programmers who want to solve
+              technical challenges and learn and incorporate new technologies
+              into their skillset to join our team and grow with us.
+            </CardDescription>
+          </CardContent>
+        </Card>{" "}
+        <Card>
+          <CardHeader>
+            <CardTitle>Heading/Title</CardTitle>
+          </CardHeader>
+          <CardContent className="borde">
+            <CardDescription>
+              Here at Microsoft, we are a passionate, fun-loving, growing team.
+              We are looking for passionate programmers who want to solve
+              technical challenges and learn and incorporate new technologies
+              into their skillset to join our team and grow with us.
+            </CardDescription>
+          </CardContent>
+          <CardFooter className="justify-end gap-3">
+            <Button variant="destructive">Delete</Button>
+            <Button>Apply</Button>
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Heading/Title</CardTitle>
+          </CardHeader>
+          <CardContent className="borde">
+            <CardDescription>
+              Here at Microsoft, we are a passionate, fun-loving, growing team.
+              We are looking for passionate programmers who want to solve
+              technical challenges and learn and incorporate new technologies
+              into their skillset to join our team and grow with us.
+            </CardDescription>
+          </CardContent>
+        </Card>
+      </div>
 
-      <div className="flex gap-4">
+      <div className="flex gap-4 mt-5">
         <Button onClick={() => alert(1)} variant="destructive">
           Delete
         </Button>
