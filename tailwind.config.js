@@ -3,7 +3,13 @@ module.exports = {
   darkMode: ["class"],
   content: ["./app/**/*.{js,jsx,ts,tsx}"],
   prefix: "",
+
   theme: {
+    fontFamily: {
+      sans: ['mulish', 'sans-serif', 'ui-sans-serif', 'system-ui'],
+      display: ['mulish', 'sans-serif', 'ui-sans-serif', 'system-ui'],
+      body: ['mulish', 'serif', 'ui-serif', 'system-ui'],
+    },
     container: {
       center: true,
       padding: "1rem",

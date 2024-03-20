@@ -28,11 +28,13 @@ const textFieldVariants = cva(
 );
 
 interface TextFieldProps
-  extends React.HTMLAttributes<typeof HTMLInputElement>,
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size">,
     VariantProps<typeof textFieldVariants> {
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
   size?: "default" | "sm" | "lg";
+  // type?: React.HTMLInputTypeAttribute;
+  className?: string;
 }
 
 const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
@@ -40,27 +42,17 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
     return (
       <div className="relative">
         {iconLeft && (
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3">
+          <div className="absolute inset-y-0 left-0 text-gray-500 flex items-center pl-3">
             {iconLeft}
           </div>
         )}
         <input
           ref={ref}
-          type="text"
           className={cn(textFieldVariants({ variant, size, className }))}
           {...props}
         />
-        {/* <input
-          className={cn(
-            "p-2.5 focus-visible:outline-none focus:border-primary rounded-md border flex w-full flex-col space-y-1.5 text-sm leading-none",
-            className,
-            size
-          )}
-          ref={ref}
-          {...props}
-        /> */}
         {iconRight && (
-          <div className="absolute inset-y-0 right-0 flex items-center pr-3">
+          <div className="absolute inset-y-0  right-0 text-gray-500 flex items-center pr-3">
             {iconRight}
           </div>
         )}

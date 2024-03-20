@@ -20,7 +20,7 @@ export function Navigation(): JSX.Element {
                     "items-center",
                     "border-b-2",
                     "text-sm",
-                    "font-medium",
+                    "font-bold",
                     {
                       "text-primary hover:border-primary hover:text-primary border-primary":
                         isActive,

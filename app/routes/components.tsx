@@ -1,5 +1,11 @@
+import { FormEvent } from "react";
 import { json, type MetaFunction } from "@remix-run/node";
-
+import {
+  UserIcon,
+  EnvelopeIcon,
+  ChevronRightIcon,
+  LockClosedIcon,
+} from "@heroicons/react/24/outline";
 import {
   Avatar,
   AvatarFallback,
@@ -22,7 +28,7 @@ import {
   MenubarItem,
   MenubarSeparator,
 } from "~/components/ui/menubar/menubar";
-import { ChevronRightIcon, EnvelopeOpenIcon } from "@radix-ui/react-icons";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -53,13 +59,36 @@ export default function Index() {
   return (
     <div className="container mt-5">
       <h1 className="text-5xl text-primary mb-5">Welcome to Remix</h1>
-      <div className="w-96">
+      <div className="w-1/2 flex gap-4">
         <TextField
-          iconLeft={<EnvelopeOpenIcon />}
-          iconRight={<ChevronRightIcon />}
+          iconLeft={<UserIcon className="h-5 w-5" />}
+          iconRight={<ChevronRightIcon className="h-5 w-5" />}
           className="px-10"
           onChange={() => {
             console.log(1);
+          }}
+        />
+        <TextField
+          type="email"
+          iconLeft={<EnvelopeIcon className="h-5 w-5" />}
+          className="pl-10"
+          onChange={(
+            event: FormEvent<HTMLInputElement>
+          ): FormEvent<HTMLInputElement> | void => {
+            // Your logic here
+
+            console.log(event.currentTarget.value);
+          }}
+        />
+        <TextField
+          type="password"
+          iconLeft={<LockClosedIcon className="h-5 w-5" />}
+          className="pl-10"
+          onChange={(
+            event: FormEvent<HTMLInputElement>
+          ): FormEvent<HTMLInputElement> | void => {
+            // Your logic here
+            console.log(event.currentTarget.value);
           }}
         />
       </div>
@@ -127,7 +156,7 @@ export default function Index() {
           <ChevronRightIcon className="h-4 w-4" />
         </Button>
         <Button>
-          <EnvelopeOpenIcon className="mr-2 h-4 w-4" /> Login with Email
+          <EnvelopeIcon className="mr-2 h-4 w-4" /> Login with Email
         </Button>
       </div>
 
