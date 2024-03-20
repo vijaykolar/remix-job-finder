@@ -45,7 +45,7 @@ import {
   CardHeader,
   CardTitle,
 } from "~/components/ui/card/card";
-import { TextField } from "~/components/ui/textfield/textfiled";
+import { TextField } from "~/components/ui/textfield/textfield";
 
 export const meta: MetaFunction = () => {
   return [
