@@ -1,38 +1,37 @@
-# Welcome to Remix!
+# Job Finder
 
-- [Remix Docs](https://remix.run/docs)
+# Description
 
-## Development
+This project aims to create a user interface with various components such as dialogs, buttons, text fields, cards, headers, dropdowns, badges, menus, and avatars. Additionally, it focuses on implementing a cohesive theme throughout the interface.
 
-From your terminal:
+# Components Added:
 
-```sh
-npm run dev
-```
+- Skeleton: Initial structure implemented.
+- Dialog: Dialog boxes for interactive communication.
+- Button: Interactive elements for triggering actions.
+- TextField: Input fields for textual data entry.
+- Card: Containers for organizing and displaying content.
+- Header: Top-level section for titles or navigation.
+- Dropdown: Selectable dropdown menus.
+- Badge: Visual indicators for status or notifications.
+- Menubar: Navigation bar for accessing different sections.
+- Avatar: Representations of users or entities.
+- Button: Additional buttons for various actions.
 
-This starts your app in development mode, rebuilding assets on file changes.
+# Theme
 
-## Deployment
+Worked on implementing a consistent theme across all components to ensure visual coherence and user experience.
 
-First, build your app for production:
+# Project Setup
 
-```sh
-npm run build
-```
+This project utilizes the create-remix framework for development. To set up the project locally, follow these steps:
 
-Then run the app in production mode:
+# Clone the repository.
 
-```sh
-npm start
-```
+1. Navigate to the project directory.
+2. Install dependencies using `npm install` or `yarn install`.
+3. Start the development server using `npm dev` or `yarn dev`.
 
-Now you'll need to pick a host to deploy it to.
+# Initial Commit
 
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+The initial commit includes the setup of the project using create-remix.
