@@ -91,6 +91,9 @@ export default function Index() {
             console.log(event.currentTarget.value);
           }}
         />
+        <Button className="h-9" type="reset">
+          Submit
+        </Button>
       </div>
       <div className="grid grid-cols-4 gap-3 mt-5">
         <Card>
