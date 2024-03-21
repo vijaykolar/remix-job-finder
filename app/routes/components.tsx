@@ -29,6 +29,7 @@ import {
 
 import {
   DropdownMenu,
+  DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
@@ -353,6 +354,7 @@ export default function Index() {
         </Menubar>
       </div>
       <div className="mt-5 text-center">
+        this is dropdown
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline">Open</Button>
@@ -360,6 +362,7 @@ export default function Index() {
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
+            <DropdownMenuCheckboxItem checked>Checked</DropdownMenuCheckboxItem>
             <DropdownMenuItem>Profile</DropdownMenuItem>
             <DropdownMenuItem>Billing</DropdownMenuItem>
             <DropdownMenuItem>Team</DropdownMenuItem>
