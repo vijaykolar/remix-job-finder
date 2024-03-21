@@ -9,6 +9,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import { Toaster } from "react-hot-toast";
+
 import globalStyles from "./globals.css";
 import { Header } from "./components/header";
 import "@fontsource/mulish/400.css";
@@ -34,6 +36,7 @@ export default function App() {
         <Header />
         <Outlet />
         <ScrollRestoration />
+        <Toaster />
         <Scripts />
         <LiveReload />
       </body>
