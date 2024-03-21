@@ -5,6 +5,7 @@ import {
   EnvelopeIcon,
   ChevronRightIcon,
   LockClosedIcon,
+  ClipboardIcon,
 } from "@heroicons/react/24/outline";
 import {
   Avatar,
@@ -46,6 +47,16 @@ import {
   CardTitle,
 } from "~/components/ui/card/card";
 import { TextField } from "~/components/ui/textfield/textfield";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTrigger,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+  DialogClose,
+} from "~/components/ui/dialog";
 
 export const meta: MetaFunction = () => {
   return [
@@ -59,6 +70,39 @@ export default function Index() {
   return (
     <div className="container mt-5">
       <h1 className="text-5xl text-primary mb-5">Welcome to Remix</h1>
+      <div className="my-5">
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button variant="outline" size="sm">
+              Share
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-md top-[30%]">
+            <DialogHeader>
+              <DialogTitle>Share link</DialogTitle>
+              <DialogDescription>
+                Anyone who has this link will be able to view this.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="flex items-center space-x-2">
+              <div className="grid flex-1 gap-2">
+                {/* <Label htmlFor="link" className="sr-only">
+                  Link
+                </Label> */}
+                <TextField
+                  id="link"
+                  defaultValue="https://heroicons.com/"
+                  readOnly
+                />
+              </div>
+              <Button type="submit" className="px-3">
+                <span className="sr-only">Copy</span>
+                <ClipboardIcon className="h-4 w-4" />
+              </Button>
+            </div>
+          </DialogContent>
+        </Dialog>
+      </div>
       <div className="w-1/2 flex gap-4">
         <TextField
           iconLeft={<UserIcon className="h-5 w-5" />}
