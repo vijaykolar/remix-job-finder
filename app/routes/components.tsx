@@ -69,6 +69,78 @@ export default function Index() {
   return (
     <div className="container mt-5">
       <h1 className="text-5xl text-primary mb-5">Welcome to Remix</h1>
+      <div className="flex flex-col gap-4">
+        <div>
+          <h1 className="text-3xl mb-4">Buttons</h1>
+          <div className="flex gap-4 flex-wrap">
+            <Button>Default</Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="outline">Outline</Button>
+            <Button variant="ghost">Ghost</Button>
+            <Button variant="link">Link</Button>
+            <Button variant="destructive">Destructive</Button>
+            <Button size="sm">Default</Button>
+            <Button size="sm" variant="secondary">
+              Secondary
+            </Button>
+            <Button size="sm" variant="outline">
+              Outline
+            </Button>
+            <Button size="sm" variant="ghost">
+              ghost
+            </Button>
+            <Button size="sm" variant="link">
+              Link
+            </Button>
+            <Button size="sm" variant="destructive">
+              Destructive
+            </Button>
+            <Button size="lg">Default</Button>
+            <Button size="lg" variant="secondary">
+              Secondary
+            </Button>
+            <Button size="lg" variant="outline">
+              Outline
+            </Button>
+            <Button size="lg" variant="ghost">
+              ghost
+            </Button>
+            <Button size="lg" variant="link">
+              Link
+            </Button>
+            <Button size="lg" variant="destructive">
+              Destructive
+            </Button>
+            <Button
+              className="bg-green-600 hover:bg-green-600/90"
+              onClick={() => toast.success("Success!")}
+              size="sm"
+            >
+              Show success toast
+            </Button>
+            <Button
+              variant="destructive"
+              onClick={() => toast.error("Failed!")}
+              size="sm"
+            >
+              Show error toast
+            </Button>
+            <Button variant="destructive" size="icon">
+              <ChevronRightIcon className="h-4 w-4" />
+            </Button>
+            <Button size="icon">
+              <ChevronRightIcon className="h-4 w-4" />
+            </Button>
+            <Button>
+              <EnvelopeIcon className="mr-2 h-4 w-4" /> Login with Email
+            </Button>
+            <Button variant="outline">
+              <EnvelopeIcon className="mr-2 h-4 w-4" /> Signup{" "}
+            </Button>
+          </div>
+        </div>
+      </div>
+
       <div className="my-5 w-[300px]">
         <div>
           <div className="flex items-center space-x-4">
@@ -207,41 +279,6 @@ export default function Index() {
             </CardDescription>
           </CardContent>
         </Card>
-      </div>
-
-      <div className="flex gap-4 mt-5">
-        <Button onClick={() => alert(1)} variant="destructive">
-          Delete
-        </Button>
-
-        <Button
-          className="bg-green-600 hover:bg-green-600/90"
-          onClick={() => toast.success("Success!")}
-          size="sm"
-        >
-          Show success toast
-        </Button>
-        <Button
-          variant="destructive"
-          onClick={() => toast.error("Failed!")}
-          size="sm"
-        >
-          Show error toast
-        </Button>
-        <Button size="lg">Default</Button>
-        <Button>Default</Button>
-        <Button variant="outline">Outline</Button>
-        <Button variant="secondary">secondary </Button>
-        <Button variant="ghost">ghost</Button>
-        <Button variant="destructive" size="icon">
-          <ChevronRightIcon className="h-4 w-4" />
-        </Button>
-        <Button size="icon">
-          <ChevronRightIcon className="h-4 w-4" />
-        </Button>
-        <Button>
-          <EnvelopeIcon className="mr-2 h-4 w-4" /> Login with Email
-        </Button>
       </div>
 
       <div className="flex gap-4">
