@@ -7,6 +7,7 @@ import {
   LockClosedIcon,
   ClipboardIcon,
 } from "@heroicons/react/24/outline";
+
 import {
   Avatar,
   AvatarFallback,
@@ -54,11 +55,10 @@ import {
   DialogTrigger,
   DialogTitle,
   DialogDescription,
-  DialogFooter,
-  DialogClose,
 } from "~/components/ui/dialog";
 import { Skeleton } from "~/components/ui/skeleton";
 import { Label } from "~/components/ui/label";
+import { toast } from "react-hot-toast";
 
 export const meta: MetaFunction = () => {
   return [
@@ -217,8 +217,21 @@ export default function Index() {
           Delete
         </Button>
 
-        <Button size="sm">Submit</Button>
-        <Button size="lg">Deagult</Button>
+        <Button
+          className="bg-green-600 hover:bg-green-600/90"
+          onClick={() => toast.success("Success!")}
+          size="sm"
+        >
+          Show success toast
+        </Button>
+        <Button
+          variant="destructive"
+          onClick={() => toast.error("Failed!")}
+          size="sm"
+        >
+          Show error toast
+        </Button>
+        <Button size="lg">Default</Button>
         <Button>Default</Button>
         <Button variant="outline">Outline</Button>
         <Button variant="secondary">secondary </Button>
