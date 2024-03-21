@@ -8,13 +8,9 @@ import {
   ClipboardIcon,
 } from "@heroicons/react/24/outline";
 
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "~/components/ui/avatar/avatar";
-import { Badge } from "~/components/ui/badge/badge";
-import { Button } from "~/components/ui/button/button";
+import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
+import { Badge } from "~/components/ui/badge";
+import { Button } from "~/components/ui/button";
 import {
   Menubar,
   MenubarCheckboxItem,
@@ -29,7 +25,7 @@ import {
   MenubarTrigger,
   MenubarItem,
   MenubarSeparator,
-} from "~/components/ui/menubar/menubar";
+} from "~/components/ui/menubar";
 
 import {
   DropdownMenu,
@@ -38,7 +34,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "~/components/ui/dropdown/dropdown";
+} from "~/components/ui/dropdown";
 import {
   Card,
   CardContent,
@@ -46,8 +42,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "~/components/ui/card/card";
-import { TextField } from "~/components/ui/textfield/textfield";
+} from "~/components/ui/card";
+import { TextField } from "~/components/ui/textfield";
 import {
   Dialog,
   DialogContent,
