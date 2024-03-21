@@ -6,17 +6,17 @@ This project aims to create a user interface with various components such as dia
 
 # Components Added:
 
-- Skeleton: Initial structure implemented.
-- Dialog: Dialog boxes for interactive communication.
-- Button: Interactive elements for triggering actions.
+- Button: Additional buttons for various actions.
+- Avatar: Representations of users or entities.
+- Menubar: Navigation bar for accessing different sections.
+- Badge: Visual indicators for status or notifications.
+- Header: Top-level section for titles or navigation.
+- Dropdown: Selectable dropdown menu
 - TextField: Input fields for textual data entry.
 - Card: Containers for organizing and displaying content.
-- Header: Top-level section for titles or navigation.
-- Dropdown: Selectable dropdown menus.
-- Badge: Visual indicators for status or notifications.
-- Menubar: Navigation bar for accessing different sections.
-- Avatar: Representations of users or entities.
-- Button: Additional buttons for various actions.
+- Dialog: Dialog boxes for interactive communication.
+- Skeleton: Initial structure implemented.
+- Label: Label for Textfields.
 
 # Theme
 

@@ -58,6 +58,7 @@ import {
   DialogClose,
 } from "~/components/ui/dialog";
 import { Skeleton } from "~/components/ui/skeleton";
+import { Label } from "~/components/ui/label";
 
 export const meta: MetaFunction = () => {
   return [
@@ -74,7 +75,7 @@ export default function Index() {
       <div className="my-5 w-[300px]">
         <div>
           <div className="flex items-center space-x-4">
-            <Skeleton className="h-12 w-12 min-w-12 rounded-full bg-red-500" />
+            <Skeleton className="h-12 w-12 min-w-12 rounded-full" />
             <div className="space-y-2">
               <Skeleton className="h-4 w-[250px]" />
               <Skeleton className="h-4 w-[200px]" />
@@ -82,12 +83,12 @@ export default function Index() {
           </div>
           <div className="mt-5">
             <div className="flex flex-col space-y-3">
-              <Skeleton className="h-[125px] w-full rounded-xl bg-green-300" />
+              <Skeleton className="h-[125px] w-full rounded-xl" />
               <div className="space-y-2 flex gap-2">
-                <Skeleton className="h-12 w-12 rounded-full bg-green-300" />
+                <Skeleton className="h-12 w-12 rounded-full" />
                 <div className="flex-1">
-                  <Skeleton className="h-4 bg-green-300" />
-                  <Skeleton className="h-4  mt-2 bg-green-300" />
+                  <Skeleton className="h-4" />
+                  <Skeleton className="h-4  mt-2" />
                 </div>
               </div>
             </div>
@@ -98,7 +99,7 @@ export default function Index() {
         <Dialog>
           <DialogTrigger asChild>
             <Button variant="outline" size="sm">
-              Share
+              Open Share modal
             </Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-md top-[30%]">
@@ -127,8 +128,10 @@ export default function Index() {
           </DialogContent>
         </Dialog>
       </div>
-      <div className="w-1/2 flex gap-4">
+      <div className="w-1/2 flex gap-4 items-center">
+        <Label htmlFor="email">Email</Label>
         <TextField
+          id="email"
           iconLeft={<UserIcon className="h-5 w-5" />}
           iconRight={<ChevronRightIcon className="h-5 w-5" />}
           className="px-10"
