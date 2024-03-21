@@ -1,21 +1,14 @@
 import * as React from "react";
-import {
-  CheckIcon,
-  ChevronRightIcon,
-  DotFilledIcon,
-} from "@radix-ui/react-icons";
 import * as MenubarPrimitive from "@radix-ui/react-menubar";
+import { DotFilledIcon } from "@radix-ui/react-icons";
+import { CheckIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 import { cn } from "~/lib/utils";
 
 const MenubarMenu = MenubarPrimitive.Menu;
-
 const MenubarGroup = MenubarPrimitive.Group;
-
 const MenubarPortal = MenubarPrimitive.Portal;
-
 const MenubarSub = MenubarPrimitive.Sub;
-
 const MenubarRadioGroup = MenubarPrimitive.RadioGroup;
 
 const Menubar = React.forwardRef<

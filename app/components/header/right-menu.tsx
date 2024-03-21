@@ -1,5 +1,4 @@
-import { PlusIcon } from "@radix-ui/react-icons";
-import { BellIcon } from "@heroicons/react/24/outline";
+import { BellIcon, PlusIcon } from "@heroicons/react/24/outline";
 import { Button } from "../ui/button/button";
 import {
   DropdownMenu,
@@ -15,7 +14,7 @@ export function RightMenu() {
     <div className="flex items-center">
       <div className="flex-shrink-0">
         <Button>
-          <PlusIcon className="-ml-0.5 h-5 w-5 mr-0.5" aria-hidden="true" />
+          <PlusIcon className="-ml-0.5 h-4 w-4 mr-0.5" aria-hidden="true" />
           New Job
         </Button>
       </div>
