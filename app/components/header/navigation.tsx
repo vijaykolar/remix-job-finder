@@ -1,8 +1,8 @@
-import { Disclosure } from "@headlessui/react";
-import { NavLink } from "@remix-run/react";
-import { cn } from "~/lib/utils";
-import { navigationLinks } from "./navigation-links";
-import { LinkType } from "./type";
+import { Disclosure } from '@headlessui/react';
+import { NavLink } from '@remix-run/react';
+import { cn } from '~/lib/utils';
+import { navigationLinks } from './navigation-links';
+import { LinkType } from './type';
 
 export function Navigation(): JSX.Element {
   return (
@@ -15,16 +15,16 @@ export function Navigation(): JSX.Element {
                 to={link.href}
                 className={({ isActive }: { isActive: boolean }) =>
                   cn(
-                    "inline-flex",
-                    "h-14",
-                    "items-center",
-                    "border-b-2",
-                    "text-sm",
-                    "font-bold",
+                    'inline-flex',
+                    'h-14',
+                    'items-center',
+                    'border-b-2',
+                    'text-sm',
+                    'font-bold',
                     {
-                      "text-primary hover:border-primary hover:text-primary border-primary":
+                      'text-primary hover:border-primary hover:text-primary border-primary':
                         isActive,
-                      "text-gray-500 hover:border-primary hover:text-primary border-transparent":
+                      'text-gray-500 hover:border-primary hover:text-primary border-transparent':
                         !isActive,
                     }
                   )

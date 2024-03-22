@@ -1,5 +1,5 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
+import { cssBundleHref } from '@remix-run/css-bundle';
+import type { LinksFunction } from '@remix-run/node';
 import {
   Links,
   LiveReload,
@@ -7,21 +7,21 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
+} from '@remix-run/react';
 
-import { Toaster } from "react-hot-toast";
+import { Toaster } from 'react-hot-toast';
 
-import globalStyles from "./globals.css";
-import { Header } from "./components/header";
-import "@fontsource/mulish/400.css";
-import "@fontsource/mulish/500.css";
-import "@fontsource/mulish/600.css";
-import "@fontsource/mulish/700.css";
+import globalStyles from './globals.css';
+import { Header } from './components/header';
+import '@fontsource/mulish/400.css';
+import '@fontsource/mulish/500.css';
+import '@fontsource/mulish/600.css';
+import '@fontsource/mulish/700.css';
 
 export const links: LinksFunction = () => [
-  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
+  ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
   // { rel: "stylesheet", href: stylesheet },
-  { rel: "stylesheet", href: globalStyles },
+  { rel: 'stylesheet', href: globalStyles },
 ];
 
 export default function App() {
