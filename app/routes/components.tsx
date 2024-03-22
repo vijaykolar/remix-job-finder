@@ -57,6 +57,7 @@ import { Skeleton } from "~/components/ui/skeleton";
 import { Label } from "~/components/ui/label";
 import { toast } from "react-hot-toast";
 import { Text } from "~/components/ui/text";
+import { Heading } from "~/components/ui/heading";
 
 export const meta: MetaFunction = () => {
   return [
@@ -141,9 +142,10 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div>
+      <div className="my-5">
         <div className="grid grid-cols-4 gap-4">
           <div>
+            <Heading weight="bold">Card 1</Heading>
             <Text>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
               impedit eligendi nobis autem laboriosam illo nihil sapiente
@@ -155,6 +157,9 @@ export default function Index() {
             </Text>
           </div>
           <div>
+            <Heading weight="semibold" size="xl">
+              Card 1
+            </Heading>
             <Text as="strong">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
               impedit eligendi nobis autem laboriosam illo nihil sapiente
