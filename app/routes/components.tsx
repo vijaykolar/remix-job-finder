@@ -56,6 +56,7 @@ import {
 import { Skeleton } from "~/components/ui/skeleton";
 import { Label } from "~/components/ui/label";
 import { toast } from "react-hot-toast";
+import { Text } from "~/components/ui/text";
 
 export const meta: MetaFunction = () => {
   return [
@@ -137,6 +138,51 @@ export default function Index() {
             <Button variant="outline">
               <EnvelopeIcon className="mr-2 h-4 w-4" /> Signup{" "}
             </Button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="grid grid-cols-4 gap-4">
+          <div>
+            <Text>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+              impedit eligendi nobis autem laboriosam illo nihil sapiente
+              voluptate non repellat sint modi, alias hic harum. Amet in tenetur
+              asperiores est? Labore nobis incidunt alias tempora maiores
+              cupiditate soluta rem autem. Fugiat vero impedit quod ut nostrum
+              neque aliquam, quas nisi perferendis eius dolores numquam sunt
+              maiores possimus quia illo pariatu
+            </Text>
+          </div>
+          <div>
+            <Text as="strong">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+              impedit eligendi nobis autem laboriosam illo nihil sapiente
+              voluptate non repellat sint modi, alias hic harum. Amet in tenetur
+              asperiores est? Labore nobis incidunt alias tempora maiores
+              cupiditate soluta rem autem. Fugiat vero impedit quod ut nostrum
+              neque aliquam, quas nisi perferendis eius dolores numquam sunt
+              maiores possimus quia illo pariatur.
+            </Text>
+          </div>
+          <div>
+            <Text as="em">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+              impedit eligendi nobis autem laboriosam illo nihil sapiente
+              voluptate non repellat sint modi, alias hic harum. Amet in tenetur
+              asperiores est? Labore nobis incidunt alias tempora maiores
+              cupiditate soluta rem autem. Fugiat vero impedit quod ut nostrum
+              neque aliquam, quas nisi perferendis eius dolores numquam sunt
+              maiores possimus quia illo pariatur.
+            </Text>
+          </div>
+          <div>
+            <Text as="u">
+              Here at Microsoft, we are a passionate, fun-loving, growing team.
+              We are looking for passionate programmers who want to solve
+              technical challenges and learn and incorporate new technologies
+              into their skillset to join our team and grow with us.
+            </Text>
           </div>
         </div>
       </div>
