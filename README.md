@@ -18,6 +18,7 @@ This project aims to create a user interface with various components such as dia
 - Skeleton: Initial structure implemented.
 - Label: Label for Textfields.
 - Text: Text for paragraphs. "p" | "span" | "div" | "strong" | "em" | "b" | "i" | "mark" | "u";
+- Heading: Added heading elements. "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 ## Theme
 
