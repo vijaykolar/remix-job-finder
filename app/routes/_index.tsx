@@ -1,34 +1,34 @@
-import { json, type MetaFunction } from '@remix-run/node';
+import { defer, json, type MetaFunction } from '@remix-run/node';
+import { useLoaderData } from '@remix-run/react';
+import { JobList } from '~/components/job-card';
+import { Card, CardHeader, CardTitle } from '~/components/ui/card';
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: 'New Remix App' },
-    { name: 'description', content: 'Welcome to Remix!' },
-  ];
+  return [{ title: 'Job Finder App' }, { name: 'description', content: 'Welcome to Job Finder App!' }];
 };
 
 export default function Index() {
-  // const formData = useLoaderData<typeof loader>();
   return (
     <div className="container mt-5">
-      <h1 className="text-5xl text-green-500">Welcome to Remix</h1>
-      This is home page
+      <div className="lg:grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 col-span-3 gap-4">
+          <JobList />
+        </div>
+        <div>
+          <Card>
+            <CardHeader>
+              <CardTitle>Recommended jobs</CardTitle>
+            </CardHeader>
+          </Card>
+        </div>
+      </div>
     </div>
   );
 }
 
 export async function loader() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-  const data = await res.json();
-  return json(data);
-}
+  const res = await fetch('https://nqpq63-3000.csb.app/jobs');
+  const jobs = await res.json();
 
-// export async function action({ request }) {
-//   const formData = await request.formData();
-//   console.log(formData);
-//   alert(1);
-//   return json({
-//     success: true,
-//     formData: Object.fromEntries(formData),
-//   });
-// };
+  return json(jobs.data);
+}
