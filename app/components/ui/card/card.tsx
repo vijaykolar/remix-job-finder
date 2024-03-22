@@ -1,6 +1,6 @@
-import * as React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "~/lib/utils";
+import * as React from 'react';
+import { cva, type VariantProps } from 'class-variance-authority';
+import { cn } from '~/lib/utils';
 
 interface CardTypes extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -10,7 +10,7 @@ const Card = React.forwardRef<HTMLDivElement, CardTypes>(
   ({ className, ...props }, ref) => {
     return (
       <div
-        className={cn("rounded-md bg-background shadow-sm border", className)}
+        className={cn('rounded-md bg-background shadow-sm border', className)}
         ref={ref}
         {...props}
       />
@@ -18,41 +18,41 @@ const Card = React.forwardRef<HTMLDivElement, CardTypes>(
   }
 );
 
-Card.displayName = "Card";
+Card.displayName = 'Card';
 
 const CardHeader = React.forwardRef<HTMLDivElement, CardTypes>(
   ({ className, ...props }, ref) => {
     return (
       <div
         ref={ref}
-        className={cn("flex flex-col space-y-1.5 p-4", className)}
+        className={cn('flex flex-col space-y-1.5 p-4', className)}
         {...props}
       />
     );
   }
 );
 
-CardHeader.displayName = "CardHeader";
+CardHeader.displayName = 'CardHeader';
 
 const cardTitleVariants = cva(
-  "text-gray-800 font-medium leading-none tracking-tight",
+  'text-gray-800 font-medium leading-none tracking-tight',
   {
     variants: {
       size: {
-        default: "text-base",
-        sm: "text-sm",
-        lg: "text-lg",
-        xl: "text-xl",
-        "2xl": "text-2xl",
+        default: 'text-base',
+        sm: 'text-sm',
+        lg: 'text-lg',
+        xl: 'text-xl',
+        '2xl': 'text-2xl',
       },
       color: {
-        default: "text-gray-800",
-        primary: "text-primary",
+        default: 'text-gray-800',
+        primary: 'text-primary',
       },
     },
     defaultVariants: {
-      size: "default",
-      color: "default",
+      size: 'default',
+      color: 'default',
     },
   }
 );
@@ -62,12 +62,12 @@ interface CardTitleTypes
     VariantProps<typeof cardTitleVariants> {
   claName?: string;
   children: React.ReactNode;
-  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-  color?: "default" | "primary";
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  color?: 'default' | 'primary';
 }
 
 const CardTitle = React.forwardRef<HTMLHeadingElement, CardTitleTypes>(
-  ({ className, children, size, color, as = "h3", ...props }, ref) => {
+  ({ className, children, size, color, as = 'h3', ...props }, ref) => {
     const Comp = as;
     return (
       <Comp
@@ -81,7 +81,7 @@ const CardTitle = React.forwardRef<HTMLHeadingElement, CardTitleTypes>(
   }
 );
 
-CardTitle.displayName = "CardTitle";
+CardTitle.displayName = 'CardTitle';
 
 interface CardDescriptionTypes
   extends React.HTMLAttributes<HTMLParagraphElement> {
@@ -96,14 +96,14 @@ const CardDescription = React.forwardRef<
   return (
     <p
       ref={ref}
-      className={cn("text-sm leading-normal text-gray-600", className)}
+      className={cn('text-sm leading-normal text-gray-600', className)}
     >
       {children}
     </p>
   );
 });
 
-CardDescription.displayName = "CardDescription";
+CardDescription.displayName = 'CardDescription';
 
 interface CardContentTypes extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -111,11 +111,11 @@ interface CardContentTypes extends React.HTMLAttributes<HTMLDivElement> {
 
 const CardContent = React.forwardRef<HTMLDivElement, CardContentTypes>(
   ({ className, ...props }, ref) => {
-    return <div ref={ref} className={cn("p-4 pt-0", className)} {...props} />;
+    return <div ref={ref} className={cn('p-4 pt-0', className)} {...props} />;
   }
 );
 
-CardContent.displayName = "CardContent";
+CardContent.displayName = 'CardContent';
 
 interface CardFooterTypes extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -125,13 +125,13 @@ const CardFooter = React.forwardRef<HTMLDivElement, CardFooterTypes>(
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn("flex items-center p-4 pt-0", className)}
+      className={cn('flex items-center p-4 pt-0', className)}
       {...props}
     />
   )
 );
 
-CardFooter.displayName = "CardFooter";
+CardFooter.displayName = 'CardFooter';
 
 export {
   Card,

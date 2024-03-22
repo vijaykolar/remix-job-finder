@@ -1,16 +1,16 @@
-import { FormEvent } from "react";
-import { json, type MetaFunction } from "@remix-run/node";
+import { FormEvent } from 'react';
+import { json, type MetaFunction } from '@remix-run/node';
 import {
   UserIcon,
   EnvelopeIcon,
   ChevronRightIcon,
   LockClosedIcon,
   ClipboardIcon,
-} from "@heroicons/react/24/outline";
+} from '@heroicons/react/24/outline';
 
-import { Avatar, AvatarFallback, AvatarImage } from "~/components/ui/avatar";
-import { Badge } from "~/components/ui/badge";
-import { Button } from "~/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
+import { Badge } from '~/components/ui/badge';
+import { Button } from '~/components/ui/button';
 import {
   Menubar,
   MenubarCheckboxItem,
@@ -25,7 +25,7 @@ import {
   MenubarTrigger,
   MenubarItem,
   MenubarSeparator,
-} from "~/components/ui/menubar";
+} from '~/components/ui/menubar';
 
 import {
   DropdownMenu,
@@ -35,7 +35,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "~/components/ui/dropdown";
+} from '~/components/ui/dropdown';
 import {
   Card,
   CardContent,
@@ -43,8 +43,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "~/components/ui/card";
-import { TextField } from "~/components/ui/textfield";
+} from '~/components/ui/card';
+import { TextField } from '~/components/ui/textfield';
 import {
   Dialog,
   DialogContent,
@@ -52,17 +52,17 @@ import {
   DialogTrigger,
   DialogTitle,
   DialogDescription,
-} from "~/components/ui/dialog";
-import { Skeleton } from "~/components/ui/skeleton";
-import { Label } from "~/components/ui/label";
-import { toast } from "react-hot-toast";
-import { Text } from "~/components/ui/text";
-import { Heading } from "~/components/ui/heading";
+} from '~/components/ui/dialog';
+import { Skeleton } from '~/components/ui/skeleton';
+import { Label } from '~/components/ui/label';
+import { toast } from 'react-hot-toast';
+import { Text } from '~/components/ui/text';
+import { Heading } from '~/components/ui/heading';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: 'New Remix App' },
+    { name: 'description', content: 'Welcome to Remix!' },
   ];
 };
 
@@ -115,14 +115,14 @@ export default function Index() {
             </Button>
             <Button
               className="bg-green-600 hover:bg-green-600/90"
-              onClick={() => toast.success("Success!")}
+              onClick={() => toast.success('Success!')}
               size="sm"
             >
               Show success toast
             </Button>
             <Button
               variant="destructive"
-              onClick={() => toast.error("Failed!")}
+              onClick={() => toast.error('Failed!')}
               size="sm"
             >
               Show error toast
@@ -137,7 +137,7 @@ export default function Index() {
               <EnvelopeIcon className="mr-2 h-4 w-4" /> Login with Email
             </Button>
             <Button variant="outline">
-              <EnvelopeIcon className="mr-2 h-4 w-4" /> Signup{" "}
+              <EnvelopeIcon className="mr-2 h-4 w-4" /> Signup{' '}
             </Button>
           </div>
         </div>
@@ -299,7 +299,7 @@ export default function Index() {
               into their skillset to join our team and grow with us.
             </CardDescription>
           </CardContent>
-        </Card>{" "}
+        </Card>{' '}
         <Card>
           <CardHeader>
             <CardTitle>Heading/Title</CardTitle>
@@ -463,7 +463,7 @@ export default function Index() {
 }
 
 export async function loader() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
   const data = await res.json();
   return json(data);
 }

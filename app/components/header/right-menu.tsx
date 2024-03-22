@@ -1,5 +1,5 @@
-import { BellIcon, PlusIcon } from "@heroicons/react/24/outline";
-import { Button } from "../ui/button/button";
+import { BellIcon, PlusIcon } from '@heroicons/react/24/outline';
+import { Button } from '../ui/button/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,7 +7,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "../ui/dropdown/dropdown";
+} from '../ui/dropdown/dropdown';
 
 export function RightMenu() {
   return (

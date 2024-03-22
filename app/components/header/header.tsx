@@ -1,9 +1,9 @@
-import { Disclosure } from "@headlessui/react";
-import { Logo } from "./logo";
-import { Navigation } from "./navigation";
-import { Bars3Icon, XMarkIcon, BellIcon } from "@heroicons/react/24/outline";
-import { RightMenu } from "./right-menu";
-import { MobileNavigation } from "./mobile-navigation";
+import { Disclosure } from '@headlessui/react';
+import { Logo } from './logo';
+import { Navigation } from './navigation';
+import { Bars3Icon, XMarkIcon, BellIcon } from '@heroicons/react/24/outline';
+import { RightMenu } from './right-menu';
+import { MobileNavigation } from './mobile-navigation';
 
 export function Header(): JSX.Element {
   return (

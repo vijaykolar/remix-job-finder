@@ -1,22 +1,22 @@
-import * as React from "react";
-import * as AvatarPrimitive from "@radix-ui/react-avatar";
+import * as React from 'react';
+import * as AvatarPrimitive from '@radix-ui/react-avatar';
 
-import { cn } from "~/lib/utils";
-import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from '~/lib/utils';
+import { cva, type VariantProps } from 'class-variance-authority';
 
 const avatarVariants = cva(
-  "relative flex items-center justify-center overflow-hidden rounded-full",
+  'relative flex items-center justify-center overflow-hidden rounded-full',
   {
     variants: {
       size: {
-        default: "h-10 w-10",
-        sm: "h-8 w-8",
-        lg: "h-12 w-12",
-        xl: "h-14 w-14",
+        default: 'h-10 w-10',
+        sm: 'h-8 w-8',
+        lg: 'h-12 w-12',
+        xl: 'h-14 w-14',
       },
     },
     defaultVariants: {
-      size: "default",
+      size: 'default',
     },
   }
 );
@@ -25,7 +25,7 @@ interface AvatarProps
   extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>,
     VariantProps<typeof avatarVariants> {
   className?: string;
-  size?: "default" | "sm" | "lg" | "xl";
+  size?: 'default' | 'sm' | 'lg' | 'xl';
 }
 
 const Avatar = React.forwardRef<
@@ -53,7 +53,7 @@ const AvatarImage = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Image
     ref={ref}
-    className={cn("aspect-square h-full w-full", className)}
+    className={cn('aspect-square h-full w-full', className)}
     {...props}
   />
 ));
@@ -71,7 +71,7 @@ const AvatarFallback = React.forwardRef<
   <AvatarPrimitive.Fallback
     ref={ref}
     className={cn(
-      "flex h-full w-full items-center justify-center rounded-full bg-muted",
+      'flex h-full w-full items-center justify-center rounded-full bg-muted',
       className
     )}
     {...props}

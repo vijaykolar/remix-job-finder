@@ -1,8 +1,8 @@
-import { NavLink } from "@remix-run/react";
-import { Disclosure } from "@headlessui/react";
-import { navigationLinks } from "./navigation-links";
-import { LinkType } from "./type";
-import { cn } from "~/lib/utils";
+import { NavLink } from '@remix-run/react';
+import { Disclosure } from '@headlessui/react';
+import { navigationLinks } from './navigation-links';
+import { LinkType } from './type';
+import { cn } from '~/lib/utils';
 
 export function MobileNavigation(): JSX.Element {
   return (
@@ -16,16 +16,16 @@ export function MobileNavigation(): JSX.Element {
               to={link.href}
               className={({ isActive }: { isActive: boolean }) =>
                 cn(
-                  "block",
-                  "items-center",
-                  "border-l-4",
-                  "text-sm",
-                  "font-medium",
-                  " py-2 pl-3 pr-4 text-base font-medium  sm:pl-5 sm:pr-6",
+                  'block',
+                  'items-center',
+                  'border-l-4',
+                  'text-sm',
+                  'font-medium',
+                  ' py-2 pl-3 pr-4 text-base font-medium  sm:pl-5 sm:pr-6',
                   {
-                    "text-primary  hover:border-primary hover:text-primary border-primary":
+                    'text-primary  hover:border-primary hover:text-primary border-primary':
                       isActive,
-                    "text-gray-500 hover:border-primary hover:text-primary border-transparent":
+                    'text-gray-500 hover:border-primary hover:text-primary border-transparent':
                       !isActive,
                   }
                 )
