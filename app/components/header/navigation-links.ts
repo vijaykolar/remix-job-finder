@@ -7,4 +7,4 @@ export const navigationLinks: LinkType[] = [
   { name: 'Projects', href: '/projects' },
   { name: 'Calendar', href: '/calender' },
   { name: 'Reports', href: '/reports' },
-];
+] as const;
