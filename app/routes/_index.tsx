@@ -9,7 +9,11 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   const jobs = useLoaderData<typeof loader>();
-  // console.log(jobs);
+  console.log(jobs);
+
+  if (!jobs) {
+    return <p>No jobs</p>;
+  }
 
   return (
     <div className="container mt-5">
@@ -17,7 +21,9 @@ export default function Index() {
       <div>
         <ul>
           {jobs.map((job) => (
-            <li key={job.id}>{job.title}</li>
+            <li key={job.id}>
+              {job.title} {job.description}
+            </li>
           ))}
         </ul>
       </div>
@@ -27,7 +33,7 @@ export default function Index() {
 
 export async function loader() {
   const jobs = await getJobs();
-  return json(jobs);
+  return jobs;
 }
 
 // export async function action({ request }) {
