@@ -21,7 +21,7 @@ datasource db {
 //   location             String?
 //   salary               String?
 //   numberOfApplications Int?    @default(0)
-//   company Company @relation(fields: [id], references: [id])
+//   company Company @relation(fields: [companyId], references: [id])
 // }
 
 // model Company {
@@ -29,47 +29,27 @@ datasource db {
 //   title String
 //   description String
 //   logo String
-//   jobs Job[] @relation(fields: [id], references: [id])
+//   jobs Job[] @relation(fields: [jobId], references: [id])
+//   jobId String @db.ObjectId
 // }
 
-// model User {
-//   id   String @id @default(auto()) @map("_id") @db.ObjectId
-//   name String
-// }
-
-model Job {
-  id                   String   @id @default(auto()) @map("_id") @db.ObjectId
-  title                String
-  description          String?
-  skills               Json?
-  location             String?
-  salary               String?
-  numberOfApplications Int?     @default(0)
-  company              Company? @relation(fields: [companyId], references: [id])
-  companyId            String?  @db.ObjectId
-}
 
 model Company {
-  id             String   @id @default(auto()) @map("_id") @db.ObjectId
-  title          String?
-  description    String?
-  logo           String?
-  jobs           Job[]
-  totalEmployees Int?     @default(0)
-  founded        String?
-  images         String[]
-  location       String
-  companyId      String?  @db.ObjectId
-  peopleId       String?  @db.ObjectId
+  id                   String  @id @default(auto()) @map("_id") @db.ObjectId
+  title                String
+  description          String?
+  location             String?
+  job              Job?
+  jobId                String  @db.ObjectId
 }
 
-model People {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  peopleId  String?  @db.ObjectId
-  companyId String?  @db.ObjectId
-}
-
-model User {
-  id   String @id @default(auto()) @map("_id") @db.ObjectId
-  name String
+model Job {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  description          String?
+  skills               String[]
+  salary               String?
+  numberOfApplications Int?    @default(0)
+  companyId String?  @db.ObjectId @unique
+  company   Company? @relation(fields: [companyId], references: [id])
 }
