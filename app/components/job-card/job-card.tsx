@@ -6,7 +6,7 @@ import { Job } from './job-list';
 import { formatSalary } from '~/lib/format-salary';
 
 function JobCard({ job }: { job: Job }) {
-  const { _id, company, logo, title, description, skills, jobType, appliedPersons, location, salary } = job;
+  const { _id, company, logo, title, description, skills, jobType, appliedCount, location, salary } = job;
   console.log(salary[0]);
   return (
     <Card>
@@ -20,9 +20,9 @@ function JobCard({ job }: { job: Job }) {
             <Badge size="sm" variant="secondary">
               {jobType}
             </Badge>
-            {appliedPersons > 0 && (
+            {appliedCount > 0 && (
               <Badge size="sm" variant="secondary">
-                {appliedPersons} applied
+                {appliedCount} applied
               </Badge>
             )}
             <Badge size="sm" variant="secondary">
@@ -44,7 +44,7 @@ function JobCard({ job }: { job: Job }) {
         </div>
       </CardContent>
       <CardFooter className="flex justify-between mt-4">
-        <span>${formatSalary(salary[0])}/year</span>
+        <span>${formatSalary(salary)}/year</span>
         <Link className="bg-primary text-sm text-white rounded-md px-3 py-1" to={`/jobs/${job._id}`}>
           Apply now
         </Link>

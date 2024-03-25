@@ -1,0 +1,74 @@
+{
+    "companies": [
+        {
+            "id": 1,
+            "name": "Company 1",
+            "description": "Company 1 description",
+            "logo": "https://via.placeholder.com/150",
+            "website": "https://www.company1.com",
+            "location": [
+                "Company 1 location"
+            ],
+            "isActivlyHiring": true,
+            "isFastGrowing": true,
+            "companyType": [
+                "Private",
+                "Saas",
+                "Startup"
+            ],
+            "jobs": [
+                {
+                    "id": 1,
+                    "title": "Job 1",
+                    "description": "Job 1 description",
+                    "salary": 1000,
+                    "location": "Job 1 location",
+                    "experience": "Job 1 experience",
+                    "jobType": "Full Time"
+                },
+                {
+                    "id": 2,
+                    "title": "Job 2",
+                    "description": "Job 2 description",
+                    "salary": 2000,
+                    "location": "Job 2 location",
+                    "experience": "Job 2 experience",
+                    "jobType": "Part Time"
+                }
+            ],
+            "founded": "2022-01-01",
+            "foundedes": "VK",
+            "employees": [
+                {
+                    "id": 1,
+                    "name": "Employee 1",
+                    "description": "Employee 1 description",
+                    "image": "https://via.placeholder.com/150",
+                    "title": "Employee 1 position",
+                    "work": [
+                        {
+                            "id": 1,
+                            "title": "Work 1",
+                            "description": "Work 1 description",
+                            "company": "Employee 1 company",
+                            "from": "2022-01-01",
+                            "to": "2022-01-01",
+                            "location": "Work 1 location"
+                        }
+                    ]
+                }
+            ],
+            "employeeCount": 1,
+            "images": [
+                {
+                    "id": 1,
+                    "url": "https://via.placeholder.com/150"
+                },
+                {
+                    "id": 2,
+                    "url": "https://via.placeholder.com/150"
+                }
+            ]
+        }
+    ]
+}

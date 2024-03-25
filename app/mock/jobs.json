@@ -1,0 +1,144 @@
+{
+    "jobs": [
+        {
+            "_id": 1,
+            "title": "Software Engineer",
+            "description": "Design and develop scalable software solutions. Collaborate with cross-functional teams to deliver high-quality products.",
+            "salary": "100,000-120,000 USD",
+            "location": "San Francisco, CA",
+            "experience": "3+ years",
+            "jobType": "Full Time",
+            "appliedCount": 10,
+            "skills": [
+                "Java",
+                "Spring Boot"
+            ]
+        },
+        {
+            "_id": 2,
+            "title": "Data Scientist",
+            "description": "Analyze large datasets, develop predictive models, and provide actionable insights for business decisions.",
+            "salary": "120,000-140,000 USD",
+            "location": "New York, NY",
+            "experience": "5+ years",
+            "jobType": "Full Time",
+            "appliedCount": 15,
+            "skills": [
+                "Python",
+                "Machine Learning"
+            ]
+        },
+        {
+            "_id": 3,
+            "title": "UX/UI Designer",
+            "description": "Create intuitive user interfaces and engaging user experiences. Collaborate with stakeholders to refine design concepts.",
+            "salary": "90,000-110,000 USD",
+            "location": "Seattle, WA",
+            "experience": "3+ years",
+            "jobType": "Full Time",
+            "appliedCount": 8,
+            "skills": [
+                "UI/UX Design",
+                "Adobe XD"
+            ]
+        },
+        {
+            "_id": 4,
+            "title": "Product Manager",
+            "description": "Define product vision, strategy, and roadmap. Lead cross-functional teams to deliver successful product launches.",
+            "salary": "130,000-150,000 USD",
+            "location": "Austin, TX",
+            "experience": "5+ years",
+            "jobType": "Full Time",
+            "appliedCount": 20,
+            "skills": [
+                "Product Management",
+                "Agile Methodologies"
+            ]
+        },
+        {
+            "_id": 5,
+            "title": "DevOps Engineer",
+            "description": "Automate infrastructure, manage deployments, and ensure the reliability and scalability of cloud-based systems.",
+            "salary": "110,000-130,000 USD",
+            "location": "Denver, CO",
+            "experience": "4+ years",
+            "jobType": "Full Time",
+            "appliedCount": 12,
+            "skills": [
+                "DevOps",
+                "Docker"
+            ]
+        },
+        {
+            "_id": 6,
+            "title": "Cybersecurity Analyst",
+            "description": "Monitor security systems, investigate incidents, and implement measures to protect against cyber threats.",
+            "salary": "100,000-120,000 USD",
+            "location": "Chicago, IL",
+            "experience": "3+ years",
+            "jobType": "Full Time",
+            "appliedCount": 14,
+            "skills": [
+                "Cybersecurity",
+                "Network Security"
+            ]
+        },
+        {
+            "_id": 7,
+            "title": "Quality Assurance Engineer",
+            "description": "Develop and execute test plans, identify bugs, and ensure the quality and reliability of software products.",
+            "salary": "90,000-110,000 USD",
+            "location": "Boston, MA",
+            "experience": "3+ years",
+            "jobType": "Full Time",
+            "appliedCount": 9,
+            "skills": [
+                "Software Testing",
+                "Automation"
+            ]
+        },
+        {
+            "_id": 8,
+            "title": "Technical Support Specialist",
+            "description": "Provide technical assistance to customers, troubleshoot issues, and escalate complex problems to higher levels of support.",
+            "salary": "70,000-90,000 USD",
+            "location": "Portland, OR",
+            "experience": "2+ years",
+            "jobType": "Full Time",
+            "appliedCount": 6,
+            "skills": [
+                "Technical Support",
+                "Customer Service"
+            ]
+        },
+        {
+            "_id": 9,
+            "title": "Cloud Solutions Architect",
+            "description": "Design and implement cloud-based solutions, optimize infrastructure, and ensure scalability and reliability.",
+            "salary": "140,000-160,000 USD",
+            "location": "Atlanta, GA",
+            "experience": "5+ years",
+            "jobType": "Full Time",
+            "appliedCount": 18,
+            "skills": [
+                "Cloud Computing",
+                "AWS"
+            ]
+        },
+        {
+            "_id": 10,
+            "title": "Mobile App Developer",
+            "description": "Develop native and cross-platform mobile applications, optimize performance, and implement new features.",
+            "salary": "1000-20,00 USD",
+            "location": "Los Angeles, CA",
+            "experience": "3+ years",
+            "jobType": "Full Time",
+            "appliedCount": 17,
+            "skills": [
+                "Mobile App Development",
+                "React Native"
+            ]
+        }
+    ]
+}

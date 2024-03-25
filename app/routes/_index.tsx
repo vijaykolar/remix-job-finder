@@ -2,7 +2,8 @@ import { defer, json, type MetaFunction } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import { JobList } from '~/components/job-card';
 import { Card, CardHeader, CardTitle } from '~/components/ui/card';
-
+// import { companies } from '~/mock/data.json';
+import { jobs as fakejobs } from '~/mock/jobs.json';
 export const meta: MetaFunction = () => {
   return [{ title: 'Job Finder App' }, { name: 'description', content: 'Welcome to Job Finder App!' }];
 };
@@ -27,8 +28,9 @@ export default function Index() {
 }
 
 export async function loader() {
-  const res = await fetch('https://nqpq63-3000.csb.app/jobs');
-  const jobs = await res.json();
+  // const res = await fetch('https://nqpq63-3000.csb.app/jobs');
 
-  return json(jobs.data);
+  // const jobs = await res.json();
+
+  return json(fakejobs);
 }

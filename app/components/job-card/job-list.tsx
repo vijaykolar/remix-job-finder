@@ -1,25 +1,26 @@
 import { Await, useLoaderData, useNavigation } from '@remix-run/react';
 import { JobCard } from './job-card';
-import { loader as JobLoader } from '~/routes/_index';
+import { loader as JobLoader, loader } from '~/routes/_index';
 import { Fragment } from 'react/jsx-runtime';
 import { Suspense } from 'react';
 
 export type Job = {
-  _id: string;
+  _id?: string;
   title: string;
   description: string;
   skills: string[];
   jobType: string;
   location: string;
   salary: string;
-  appliedPersons: number;
+  appliedCount: number;
   logo: string;
   company: string;
 };
 
 function JobList() {
-  const { jobs } = useLoaderData<typeof JobLoader>() as { jobs: Job[] };
+  const fakejobs = useLoaderData<typeof loader>() as [];
   const navigation = useNavigation();
+  console.log(fakejobs);
 
   if (navigation.state === 'loading') {
     return <div>Loading...</div>;
@@ -34,8 +35,8 @@ function JobList() {
           ))}
         </Await>
       </Suspense> */}
-      {jobs.map((job) => (
-        <JobCard key={job._id} job={job} />
+      {fakejobs.map((job) => (
+        <JobCard key={job} job={job} />
       ))}
     </Fragment>
   );
