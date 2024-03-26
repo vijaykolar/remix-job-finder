@@ -1,36 +1,33 @@
-import { defer, json, type MetaFunction } from '@remix-run/node';
+import { json, redirect, type MetaFunction } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
-import { JobList } from '~/components/job-card';
-import { Card, CardHeader, CardTitle } from '~/components/ui/card';
-// import { companies } from '~/mock/data.json';
-import { jobs as fakejobs } from '~/mock/jobs.json';
+import { getUsers } from '~/data/user.server';
+import { getJobs } from '~/data/job.server';
+
 export const meta: MetaFunction = () => {
-  return [{ title: 'Job Finder App' }, { name: 'description', content: 'Welcome to Job Finder App!' }];
+  return [{ title: 'New Remix App' }, { name: 'description', content: 'Welcome to Remix!' }];
 };
 
 export default function Index() {
+  const jobs = useLoaderData<typeof loader>();
+  // console.log(jobs);
+
   return (
     <div className="container mt-5">
-      <div className="lg:grid grid-cols-4 gap-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 col-span-3 gap-4">
-          <JobList />
-        </div>
-        <div>
-          <Card>
-            <CardHeader>
-              <CardTitle>Recommended jobs</CardTitle>
-            </CardHeader>
-          </Card>
-        </div>
+      <h1 className="text-5xl text-green-500">Welcome to Remix!!{jobs.length}</h1>
+      <div>
+        <ul>
+          {jobs.map((job) => (
+            <li key={job.id}>{job.title}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );
 }
 
 export async function loader() {
-  // const res = await fetch('https://nqpq63-3000.csb.app/jobs');
+  const jobs = await getJobs();
+  return json(jobs);
+}
 
   // const jobs = await res.json();
-
-  return json(fakejobs);
-}
