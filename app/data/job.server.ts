@@ -4,11 +4,20 @@ export async function getJobs() {
   try {
     const jobs = await prisma.job.findMany({
       select: {
-        title: true,
-        company: true,
         id: true,
+        title: true,
+        description: true,
+        location: true,
+        skills: true,
+        numberOfAplicants: true,
+        jobType: true,
+        experience: true,
+        company: true,
+        // description: true,
+        // skills: true,
       },
     });
+
     return jobs;
   } catch (error) {
     // throw new Error(error);
