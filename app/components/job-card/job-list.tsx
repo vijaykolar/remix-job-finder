@@ -20,7 +20,7 @@ export type Job = {
 };
 
 function JobList() {
-  const jobs = useLoaderData<typeof JobLoader>();
+  const jobs = useLoaderData<typeof JobLoader>() as Job[];
   console.log(jobs);
 
   const navigation = useNavigation();

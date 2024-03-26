@@ -12,13 +12,9 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-
   const jobs = useLoaderData<typeof loader>();
 
-
-
-
-  if (!jobs.length) {
+  if (!jobs?.length) {
     return <div>no jobs found...</div>;
   }
   return (
@@ -37,7 +33,6 @@ export default function Index() {
             </CardHeader>
           </Card>
         </div>
-
       </div>
     </div>
   );
@@ -45,8 +40,6 @@ export default function Index() {
 
 export async function loader() {
   const jobs = await getJobs();
-  const companies = await getCompany();
   console.log(jobs);
-  console.log(companies);
-  return json({ jobs, companies });
+  return jobs;
 }
