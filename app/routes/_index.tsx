@@ -2,16 +2,21 @@ import { json, redirect, type MetaFunction } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import { getUsers } from '~/data/user.server';
 import { getJobs } from '~/data/job.server';
+
 import { JobList } from '~/components/job-card';
 import { Card, CardHeader, CardTitle } from '~/components/ui/card';
+
 
 export const meta: MetaFunction = () => {
   return [{ title: 'New Remix App' }, { name: 'description', content: 'Welcome to Remix!' }];
 };
 
 export default function Index() {
+
   const jobs = useLoaderData<typeof loader>();
-  console.log(jobs);
+
+
+
 
   if (!jobs.length) {
     return <div>no jobs found...</div>;
@@ -32,6 +37,7 @@ export default function Index() {
             </CardHeader>
           </Card>
         </div>
+
       </div>
     </div>
   );
@@ -39,5 +45,8 @@ export default function Index() {
 
 export async function loader() {
   const jobs = await getJobs();
-  return json(jobs);
+  const companies = await getCompany();
+  console.log(jobs);
+  console.log(companies);
+  return json({ jobs, companies });
 }
