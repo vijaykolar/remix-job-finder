@@ -37,12 +37,4 @@ export async function loader() {
   return json({ jobs, companies });
 }
 
-// export async function action({ request }) {
-//   const formData = await request.formData();
-//   console.log(formData);
-//   alert(1);
-//   return json({
-//     success: true,
-//     formData: Object.fromEntries(formData),
-//   });
-// };
+  // const jobs = await res.json();
