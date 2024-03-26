@@ -6,28 +6,35 @@ import { Job } from './job-list';
 import { formatSalary } from '~/lib/format-salary';
 
 function JobCard({ job }: { job: Job }) {
-  const { _id, company, logo, title, description, skills, jobType, appliedCount, location, salary } = job;
-  console.log(salary[0]);
+  const { id, company, logo, title, description, skills, jobType, experience, numberOfAplicants, location, salary } =
+    job;
   return (
     <Card>
       <CardHeader className="flex flex-row space-x-4">
         <div className="size-12 bg-secondary p-1.5 rounded-sm">
-          <img className="h-full w-full " src={logo} alt="" />
+          <img className="h-full w-full " title={company?.name} src={'3'} />
         </div>
         <div className="space-y-1">
           <CardTitle className="text-xl font-medium">{title}</CardTitle>
           <div className="flex flex-wrap gap-1">
-            <Badge size="sm" variant="secondary">
+            <span className="text-xs">* {company?.name}</span>
+            <span className="text-xs">* {jobType}</span>
+            <span className="text-xs">* {location.join(', ')}</span>
+            {/* <Badge size="sm" variant="secondary">
               {jobType}
-            </Badge>
-            {appliedCount > 0 && (
+            </Badge> */}
+            {/* {numberOfAplicants > 0 && (
               <Badge size="sm" variant="secondary">
-                {appliedCount} applied
+                {numberOfAplicants} applied
               </Badge>
-            )}
-            <Badge size="sm" variant="secondary">
-              {location}
+            )} */}
+            {/* <Badge size="sm" variant="secondary">
+              {experience} years
             </Badge>
+
+            <Badge size="sm" variant="secondary">
+              {[...location].join(', ')}
+            </Badge> */}
           </div>
         </div>
       </CardHeader>
@@ -44,8 +51,9 @@ function JobCard({ job }: { job: Job }) {
         </div>
       </CardContent>
       <CardFooter className="flex justify-between mt-4">
-        <span>${formatSalary(salary)}/year</span>
-        <Link className="bg-primary text-sm text-white rounded-md px-3 py-1" to={`/jobs/${job._id}`}>
+        {/* <span>${formatSalary(salary)}/year</span> */}
+        <span>$100-120k/year</span>
+        <Link className="bg-primary text-sm text-white rounded-md px-3 py-1" to={`/jobs/${job.id}`}>
           Apply now
         </Link>
       </CardFooter>
