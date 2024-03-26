@@ -2,8 +2,13 @@ import { prisma } from './prismaclient.server';
 
 export async function getJobs() {
   try {
-    const jobs = await prisma.job.findMany({});
-
+    const jobs = await prisma.job.findMany({
+      select: {
+        title: true,
+        company: true,
+        id: true,
+      },
+    });
     return jobs;
   } catch (error) {
     // throw new Error(error);
@@ -16,7 +21,7 @@ export async function postJob(formData: any) {
     const jobs = await prisma.job.create({
       data: {
         title: formData.title,
-      },
+      } as any,
     });
     return jobs;
   } catch (error) {

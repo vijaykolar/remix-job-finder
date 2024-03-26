@@ -14,16 +14,22 @@ datasource db {
 }
 
 model Job {
-  id                      String   @id @default(auto()) @map("_id") @db.ObjectId
-  title                   String
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  description String
+  skills String[]
+  location  String[]
+  jobType String
+  numberOfAplicants Int @default(0)
+  experience String
+  companyId String  @db.ObjectId
+  company   Company @relation("CompanyJobs", fields: [companyId], references: [id])
 }
 
-model Jobs {
-  id    String @id @default(auto()) @map("_id") @db.ObjectId
-  jobId String
-}
-
-model User {
+model Company {
   id   String @id @default(auto()) @map("_id") @db.ObjectId
   name String
+  location  String[]
+  jobs Job[]  @relation("CompanyJobs")
+  images String[]
 }
