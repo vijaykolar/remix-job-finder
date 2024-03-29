@@ -9,27 +9,28 @@ generator client {
 }
 
 datasource db {
-  provider = "mongodb"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model Job {
-  id        String  @id @default(auto()) @map("_id") @db.ObjectId
-  title     String
-  description String
+  id String @id @default(uuid())
+  title String
+  description  String
   skills String[]
-  location  String[]
-  jobType String
-  numberOfAplicants Int @default(0)
   experience String
-  companyId String  @db.ObjectId
-  company   Company @relation("CompanyJobs", fields: [companyId], references: [id])
+  location String[]
+  company Company @relation(fields: [companyId], references: [id])
+  companyId String
 }
 
 model Company {
-  id   String @id @default(auto()) @map("_id") @db.ObjectId
+  id String @id @default(uuid())
   name String
-  location  String[]
-  jobs Job[]  @relation("CompanyJobs")
-  images String[]
+  jobs Job[]
+}
+
+model User {
+  id String @id @default(uuid())
+  name String
 }
