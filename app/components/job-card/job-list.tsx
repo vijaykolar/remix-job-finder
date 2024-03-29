@@ -20,9 +20,7 @@ import { Fragment } from 'react/jsx-runtime';
 // };
 
 function JobList() {
-
   const jobs = useLoaderData<typeof JobLoader>();
-
 
   const navigation = useNavigation();
 
