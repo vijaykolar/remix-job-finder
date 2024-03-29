@@ -1,6 +1,6 @@
 import { json, redirect } from '@remix-run/node';
 import { Form } from '@remix-run/react';
-import { postJob } from '~/data/job.server';
+// import { postJob } from '~/data/job.server';
 
 export default function PostJob() {
   function handleSubmit(e: any) {
@@ -19,12 +19,12 @@ export default function PostJob() {
   );
 }
 
-export async function action({ request }: { request: Request }) {
-  console.log(11);
-  const x = await request.formData();
-  console.log(x);
-  const formData = Object.fromEntries(x);
-  console.log(formData);
-  await postJob(formData);
-  return redirect('/');
-}
+// export async function action({ request }: { request: Request }) {
+//   console.log(11);
+//   const x = await request.formData();
+//   console.log(x);
+//   const formData = Object.fromEntries(x);
+//   console.log(formData);
+//   await postJob(formData);
+//   return redirect('/');
+// }

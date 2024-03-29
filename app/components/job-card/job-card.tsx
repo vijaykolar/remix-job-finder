@@ -2,24 +2,24 @@ import { Link } from '@remix-run/react';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card';
-import { Job } from './job-list';
+// import { Job } from './job-list';
 import { formatSalary } from '~/lib/format-salary';
 
-function JobCard({ job }: { job: Job }) {
+function JobCard({ job }: { job: any }) {
   const { id, company, logo, title, description, skills, jobType, experience, numberOfAplicants, location, salary } =
     job;
   return (
     <Card>
       <CardHeader className="flex flex-row space-x-4">
         <div className="size-12 bg-secondary p-1.5 rounded-sm">
-          <img className="h-full w-full " title={company?.name} src={'3'} />
+          <img className="h-full w-full " title={company?.name} src={'/'} />
         </div>
         <div className="space-y-1">
           <CardTitle className="text-xl font-medium">{title}</CardTitle>
           <div className="flex flex-wrap gap-1">
             <span className="text-xs">* {company?.name}</span>
             <span className="text-xs">* {jobType}</span>
-            <span className="text-xs">* {location.join(', ')}</span>
+            {/* <span className="text-xs">* {location.join(', ')}</span> */}
             {/* <Badge size="sm" variant="secondary">
               {jobType}
             </Badge> */}
@@ -42,11 +42,11 @@ function JobCard({ job }: { job: Job }) {
         <CardDescription>{description}</CardDescription>
         <div className="mt-4 flex gap-1">
           <div className="flex flex-wrap gap-1">
-            {skills.map((skill) => (
+            {/* {skills.map((skill: any) => (
               <Badge key={skill} variant="secondary" className="lowercase">
                 {skill}
               </Badge>
-            ))}
+            ))} */}
           </div>
         </div>
       </CardContent>
