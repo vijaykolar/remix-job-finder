@@ -1,11 +1,13 @@
+import { MetaFunction } from '@remix-run/node';
 import { useLoaderData, useParams } from '@remix-run/react';
 import { getJobs } from '~/data/job.server';
 
+export const meta: MetaFunction = ({ data }: any) => {
+  return [{ title: data.title }, { name: 'description', content: data.description || '' }];
+};
+
 export default function Jobs() {
-  const params = useParams();
-  const jobs = useLoaderData<typeof loader>();
-  const job = jobs.find((job) => job.id === params.id);
-  console.log(job);
+  const job = useLoaderData<typeof loader>();
 
   return (
     <div className="container mt-10">
@@ -14,7 +16,11 @@ export default function Jobs() {
   );
 }
 
-export async function loader() {
-  const jobs = await getJobs();
-  return jobs;
+export async function loader(data: any) {
+  console.log(data.params.id);
+  const jobs = (await getJobs()) as any;
+  const job = jobs.find((job: any) => job.id === data.params.id);
+  // console.log(job);
+
+  return job;
 }
