@@ -22,6 +22,8 @@ This project aims to create a user interface with various components such as dia
 - Added schemas for jobs and setup postgres db in koyeb.app
 - Worked on Recommended jobs card
 - Added static Recommended jobs card in home page 
+- Added user model in prisma schema
+- Added sign up page [https://central-sunshine-vik.koyeb.app/sign-up](Sign up page)
 
 ## Theme
 

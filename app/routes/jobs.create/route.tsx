@@ -1,6 +1,5 @@
 import { ActionFunctionArgs } from '@remix-run/node';
 import { Form } from '@remix-run/react';
-import { createCompany } from '~/data/company.server';
 import { createJob } from '~/data/job.server';
 export default function CreateJob() {
   return (
