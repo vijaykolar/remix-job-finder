@@ -1,5 +1,5 @@
-import { json, redirect, type MetaFunction } from '@remix-run/node';
-import { Link, useLoaderData } from '@remix-run/react';
+import { type MetaFunction } from '@remix-run/node';
+import { Link } from '@remix-run/react';
 import { JobList } from '~/components/job-card';
 import { Card, CardHeader, CardTitle } from '~/components/ui/card';
 import { getJobs } from '~/data/job.server';
@@ -37,5 +37,5 @@ export default function Index() {
 
 export async function loader() {
   const jobs = await getJobs();
-  return jobs;
+  return jobs?.slice(0, 4);
 }
