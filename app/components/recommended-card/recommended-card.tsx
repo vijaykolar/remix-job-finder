@@ -1,9 +1,10 @@
 import { Heading } from '~/components/ui/heading';
 import { Text } from '~/components/ui/text';
+import { Link } from '@remix-run/react';
 
 function RecommendedCard() {
   return (
-    <div className="flex justify-between gap-2 bg-stone-50 p-2">
+    <Link to="/jobs" className="flex justify-between gap-2 bg-stone-50 p-2">
       <div className="flex gap-2">
         <div className="size-8 rounded-md">
           <img
@@ -22,7 +23,7 @@ function RecommendedCard() {
         <Text size="xs">140k/year</Text>
         <Text size="xs">Full time</Text>
       </div>
-    </div>
+    </Link>
   );
 }
 
