@@ -74,7 +74,6 @@
     @apply bg-background text-foreground;
   }
 }
-
-body {
-  height: 5000px;
+main {
+  margin-bottom: 48px;
 }
