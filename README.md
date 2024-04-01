@@ -19,6 +19,8 @@ This project aims to create a user interface with various components such as dia
 - Label: Label for Textfields.
 - Text: Text for paragraphs. "p" | "span" | "div" | "strong" | "em" | "b" | "i" | "mark" | "u";
 - Heading: Added heading elements. "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+- Added schemas for jobs and setup postgress db in koyeb.app
+- Worked on Recommended jobs card
 
 ## Theme
 
