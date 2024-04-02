@@ -7,6 +7,7 @@ import { getJobs } from '~/data/job.server';
 import { ScheduleList } from '~/components/schedule';
 import { DropdownMenu } from '~/components/ui/dropdown';
 import { Button } from '~/components/ui/button';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/components/ui/select';
 
 export const meta: MetaFunction = () => {
   return [{ title: 'New Remix App' }, { name: 'description', content: 'Welcome to Remix!' }];
@@ -43,7 +44,18 @@ export default function Index() {
             <CardHeader>
               <div className="flex flex-row justify-between">
                 <CardTitle className="font-semibold text-base capitalize">Schedule </CardTitle>
-                <div>see all</div>
+                <div>
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Sort by" />
+                    </SelectTrigger>
+                    <SelectContent position="item-aligned">
+                      <SelectItem value="1-week">This week</SelectItem>
+                      <SelectItem value="last-week">Next week</SelectItem>
+                      <SelectItem value="month">Month</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
             </CardHeader>
             <CardContent>
