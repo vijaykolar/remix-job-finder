@@ -1,12 +1,6 @@
 import { FormEvent } from 'react';
 import { json, type MetaFunction } from '@remix-run/node';
-import {
-  UserIcon,
-  EnvelopeIcon,
-  ChevronRightIcon,
-  LockClosedIcon,
-  ClipboardIcon,
-} from '@heroicons/react/24/outline';
+import { UserIcon, EnvelopeIcon, ChevronRightIcon, LockClosedIcon, ClipboardIcon } from '@heroicons/react/24/outline';
 
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
 import { Badge } from '~/components/ui/badge';
@@ -36,14 +30,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '~/components/ui/dropdown';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '~/components/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '~/components/ui/card';
 import { TextField } from '~/components/ui/textfield';
 import {
   Dialog,
@@ -60,10 +47,7 @@ import { Text } from '~/components/ui/text';
 import { Heading } from '~/components/ui/heading';
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: 'New Remix App' },
-    { name: 'description', content: 'Welcome to Remix!' },
-  ];
+  return [{ title: 'New Remix App' }, { name: 'description', content: 'Welcome to Remix!' }];
 };
 
 export default function Index() {
@@ -113,18 +97,10 @@ export default function Index() {
             <Button size="lg" variant="destructive">
               Destructive
             </Button>
-            <Button
-              className="bg-green-600 hover:bg-green-600/90"
-              onClick={() => toast.success('Success!')}
-              size="sm"
-            >
+            <Button className="bg-green-600 hover:bg-green-600/90" onClick={() => toast.success('Success!')} size="sm">
               Show success toast
             </Button>
-            <Button
-              variant="destructive"
-              onClick={() => toast.error('Failed!')}
-              size="sm"
-            >
+            <Button variant="destructive" onClick={() => toast.error('Failed!')} size="sm">
               Show error toast
             </Button>
             <Button variant="destructive" size="icon">
@@ -147,13 +123,10 @@ export default function Index() {
           <div>
             <Heading weight="bold">Card 1</Heading>
             <Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-              impedit eligendi nobis autem laboriosam illo nihil sapiente
-              voluptate non repellat sint modi, alias hic harum. Amet in tenetur
-              asperiores est? Labore nobis incidunt alias tempora maiores
-              cupiditate soluta rem autem. Fugiat vero impedit quod ut nostrum
-              neque aliquam, quas nisi perferendis eius dolores numquam sunt
-              maiores possimus quia illo pariatu
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis impedit eligendi nobis autem laboriosam
+              illo nihil sapiente voluptate non repellat sint modi, alias hic harum. Amet in tenetur asperiores est?
+              Labore nobis incidunt alias tempora maiores cupiditate soluta rem autem. Fugiat vero impedit quod ut
+              nostrum neque aliquam, quas nisi perferendis eius dolores numquam sunt maiores possimus quia illo pariatu
             </Text>
           </div>
           <div>
@@ -161,32 +134,27 @@ export default function Index() {
               Card 1
             </Heading>
             <Text as="strong">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-              impedit eligendi nobis autem laboriosam illo nihil sapiente
-              voluptate non repellat sint modi, alias hic harum. Amet in tenetur
-              asperiores est? Labore nobis incidunt alias tempora maiores
-              cupiditate soluta rem autem. Fugiat vero impedit quod ut nostrum
-              neque aliquam, quas nisi perferendis eius dolores numquam sunt
-              maiores possimus quia illo pariatur.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis impedit eligendi nobis autem laboriosam
+              illo nihil sapiente voluptate non repellat sint modi, alias hic harum. Amet in tenetur asperiores est?
+              Labore nobis incidunt alias tempora maiores cupiditate soluta rem autem. Fugiat vero impedit quod ut
+              nostrum neque aliquam, quas nisi perferendis eius dolores numquam sunt maiores possimus quia illo
+              pariatur.
             </Text>
           </div>
           <div>
             <Text as="em">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-              impedit eligendi nobis autem laboriosam illo nihil sapiente
-              voluptate non repellat sint modi, alias hic harum. Amet in tenetur
-              asperiores est? Labore nobis incidunt alias tempora maiores
-              cupiditate soluta rem autem. Fugiat vero impedit quod ut nostrum
-              neque aliquam, quas nisi perferendis eius dolores numquam sunt
-              maiores possimus quia illo pariatur.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis impedit eligendi nobis autem laboriosam
+              illo nihil sapiente voluptate non repellat sint modi, alias hic harum. Amet in tenetur asperiores est?
+              Labore nobis incidunt alias tempora maiores cupiditate soluta rem autem. Fugiat vero impedit quod ut
+              nostrum neque aliquam, quas nisi perferendis eius dolores numquam sunt maiores possimus quia illo
+              pariatur.
             </Text>
           </div>
           <div>
             <Text as="u">
-              Here at Microsoft, we are a passionate, fun-loving, growing team.
-              We are looking for passionate programmers who want to solve
-              technical challenges and learn and incorporate new technologies
-              into their skillset to join our team and grow with us.
+              Here at Microsoft, we are a passionate, fun-loving, growing team. We are looking for passionate
+              programmers who want to solve technical challenges and learn and incorporate new technologies into their
+              skillset to join our team and grow with us.
             </Text>
           </div>
         </div>
@@ -225,20 +193,14 @@ export default function Index() {
           <DialogContent className="sm:max-w-md top-[30%]">
             <DialogHeader>
               <DialogTitle>Share link</DialogTitle>
-              <DialogDescription>
-                Anyone who has this link will be able to view this.
-              </DialogDescription>
+              <DialogDescription>Anyone who has this link will be able to view this.</DialogDescription>
             </DialogHeader>
             <div className="flex items-center space-x-2">
               <div className="grid flex-1 gap-2">
                 {/* <Label htmlFor="link" className="sr-only">
                   Link
                 </Label> */}
-                <TextField
-                  id="link"
-                  defaultValue="https://heroicons.com/"
-                  readOnly
-                />
+                <TextField id="link" defaultValue="https://heroicons.com/" readOnly />
               </div>
               <Button type="submit" className="px-3">
                 <span className="sr-only">Copy</span>
@@ -263,9 +225,7 @@ export default function Index() {
           type="email"
           iconLeft={<EnvelopeIcon className="h-5 w-5" />}
           className="pl-10"
-          onChange={(
-            event: FormEvent<HTMLInputElement>
-          ): FormEvent<HTMLInputElement> | void => {
+          onChange={(event: FormEvent<HTMLInputElement>): FormEvent<HTMLInputElement> | void => {
             // Your logic here
 
             console.log(event.currentTarget.value);
@@ -275,9 +235,7 @@ export default function Index() {
           type="password"
           iconLeft={<LockClosedIcon className="h-5 w-5" />}
           className="pl-10"
-          onChange={(
-            event: FormEvent<HTMLInputElement>
-          ): FormEvent<HTMLInputElement> | void => {
+          onChange={(event: FormEvent<HTMLInputElement>): FormEvent<HTMLInputElement> | void => {
             // Your logic here
             console.log(event.currentTarget.value);
           }}
@@ -293,10 +251,9 @@ export default function Index() {
           </CardHeader>
           <CardContent className="borde">
             <CardDescription>
-              Here at Microsoft, we are a passionate, fun-loving, growing team.
-              We are looking for passionate programmers who want to solve
-              technical challenges and learn and incorporate new technologies
-              into their skillset to join our team and grow with us.
+              Here at Microsoft, we are a passionate, fun-loving, growing team. We are looking for passionate
+              programmers who want to solve technical challenges and learn and incorporate new technologies into their
+              skillset to join our team and grow with us.
             </CardDescription>
           </CardContent>
         </Card>{' '}
@@ -306,10 +263,9 @@ export default function Index() {
           </CardHeader>
           <CardContent className="borde">
             <CardDescription>
-              Here at Microsoft, we are a passionate, fun-loving, growing team.
-              We are looking for passionate programmers who want to solve
-              technical challenges and learn and incorporate new technologies
-              into their skillset to join our team and grow with us.
+              Here at Microsoft, we are a passionate, fun-loving, growing team. We are looking for passionate
+              programmers who want to solve technical challenges and learn and incorporate new technologies into their
+              skillset to join our team and grow with us.
             </CardDescription>
           </CardContent>
           <CardFooter className="justify-end gap-3">
@@ -323,10 +279,9 @@ export default function Index() {
           </CardHeader>
           <CardContent className="borde">
             <CardDescription>
-              Here at Microsoft, we are a passionate, fun-loving, growing team.
-              We are looking for passionate programmers who want to solve
-              technical challenges and learn and incorporate new technologies
-              into their skillset to join our team and grow with us.
+              Here at Microsoft, we are a passionate, fun-loving, growing team. We are looking for passionate
+              programmers who want to solve technical challenges and learn and incorporate new technologies into their
+              skillset to join our team and grow with us.
             </CardDescription>
           </CardContent>
         </Card>
@@ -406,12 +361,8 @@ export default function Index() {
           <MenubarMenu>
             <MenubarTrigger>View</MenubarTrigger>
             <MenubarContent>
-              <MenubarCheckboxItem>
-                Always Show Bookmarks Bar
-              </MenubarCheckboxItem>
-              <MenubarCheckboxItem checked>
-                Always Show Full URLs
-              </MenubarCheckboxItem>
+              <MenubarCheckboxItem>Always Show Bookmarks Bar</MenubarCheckboxItem>
+              <MenubarCheckboxItem checked>Always Show Full URLs</MenubarCheckboxItem>
               <MenubarSeparator />
               <MenubarItem inset>
                 Reload <MenubarShortcut>⌘R</MenubarShortcut>
@@ -461,19 +412,3 @@ export default function Index() {
     </div>
   );
 }
-
-export async function loader() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-  const data = await res.json();
-  return json(data);
-}
-
-// export async function action({ request }) {
-//   const formData = await request.formData();
-//   console.log(formData);
-//   alert(1);
-//   return json({
-//     success: true,
-//     formData: Object.fromEntries(formData),
-//   });
-// };
