@@ -9,29 +9,55 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// directUrl = env("DIRECT_URL")
+
+model User {
+  id              String    @id @default(uuid())
+  name            String
+  email           String    @unique
+  password        String
+  // preferences Json
+  appliedJobs     Job[]     @relation("AppliedJobs") // one to many
+  companies       Company[]
+  companyId       String?
+  isActive        Boolean   @default(true)
+  recommendedJobs Job[]
 }
 
 model Job {
-  id          String   @id @default(uuid())
-  title       String
-  description String
-  skills      String[]
-  experience  String
-  location    String[]
-  company     Company? @relation(fields: [companyId], references: [id])
-  companyId   String?
+  id                String   @id @default(uuid())
+  title             String
+  description       String
+  skills            String[]
+  location          String[]
+  createdAt         DateTime @default(now())
+  experience        String
+  employeeType      String
+  salary            String
+  appliedCandidates User[]   @relation("AppliedJobs")
+  userId            String?
+  company           Company  @relation(fields: [companyId], references: [id])
+  companyId         String
+  isActive          Boolean  @default(true)
+
+  User User? @relation(fields: [userId], references: [id])
 }
 
 model Company {
-  id   String @id @default(uuid())
-  name String
-  jobs Job[]
-}
-
-model User {
-  id   String @id @default(uuid())
-  name String
+  id               String   @id @default(uuid())
+  name             String
+  jobs             Job[]
+  employees        User[]
+  userId           String?
+  description      String
+  isActivelyHiring Boolean
+  rating           Float
+  companySize      Int
+  location         String[]
+  website          String
+  founded          String
 }

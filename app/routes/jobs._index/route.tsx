@@ -1,7 +1,12 @@
+import { MetaFunction } from '@remix-run/node';
 import { useLoaderData, useNavigation } from '@remix-run/react';
 import { JobList } from '~/components/job-card';
 import { Card, CardContent } from '~/components/ui/card';
 import { getJobs } from '~/data/job.server';
+
+export const meta: MetaFunction = () => {
+  return [{ title: 'Remix All Jobs' }, { name: 'description', content: 'Welcome to Remix!' }];
+};
 
 export default function Jobs() {
   const jobs = useLoaderData<typeof loader>();

@@ -47,7 +47,7 @@ import { Text } from '~/components/ui/text';
 import { Heading } from '~/components/ui/heading';
 
 export const meta: MetaFunction = () => {
-  return [{ title: 'New Remix App' }, { name: 'description', content: 'Welcome to Remix!' }];
+  return [{ title: 'UI Components' }, { name: 'description', content: 'Welcome to Remix!' }];
 };
 
 export default function Index() {

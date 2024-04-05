@@ -11,7 +11,7 @@ import { Heading } from '~/components/ui/heading';
 import { FeaturedCompaniesList } from '~/components/featured-companies';
 
 export const meta: MetaFunction = () => {
-  return [{ title: 'New Remix App' }, { name: 'description', content: 'Welcome to Remix!' }];
+  return [{ title: 'Remix Job Finder ' }, { name: 'description', content: 'Welcome to Remix!' }];
 };
 
 export default function Index() {
