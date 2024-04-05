@@ -19,7 +19,7 @@ function JobCard({ job }: { job: any }) {
           />
         </div>
         <div className="space-y-1">
-          <CardTitle className="text-xl font-medium">{title}</CardTitle>
+          <CardTitle className="text-base font-semibold">{title}</CardTitle>
           <div className="flex flex-wrap gap-1">
             {/* <span className="text-xs">* {location.join(', ')}</span> */}
             {/* <Badge size="sm" variant="secondary">
