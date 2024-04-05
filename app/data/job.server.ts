@@ -13,12 +13,12 @@ async function createJob(formData: any) {
   try {
     const job = await prisma.job.create({
       data: {
-        title: 'Node Js Developer',
+        title: 'Front end developer',
         description:
-          'A Node.js developer is responsible for writing server-side web application logic in JavaScript and/or variants of it, such as CoffeeScript, IcedCoffeeScript',
-        experience: '5+',
+          'Here at JOBFINDER, we are a passionate, fun-loving, growing team. We are looking for passionate programmers who want to solve technical challenges and learn and incorporate new technologies into their skillset to join our team and grow with us.',
+        experience: '15+',
         location: ['Bangalore', 'remote'],
-        skills: ['node', 'mysql/nosql', 'JS', 'aws'],
+        skills: ['react', 'html/css', 'JS', 'aws'],
       } as any,
     });
 

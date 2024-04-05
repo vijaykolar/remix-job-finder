@@ -1,4 +1,4 @@
-import {  useLoaderData, useNavigation } from '@remix-run/react';
+import { useLoaderData, useNavigation } from '@remix-run/react';
 import { JobCard } from './job-card';
 import { loader as JobLoader } from '~/routes/_index';
 import { Fragment } from 'react/jsx-runtime';
@@ -19,22 +19,10 @@ import { Fragment } from 'react/jsx-runtime';
 //   experience?: string;
 // };
 
-function JobList() {
-  const jobs = useLoaderData<typeof JobLoader>();
+function JobList({ jobs }: any) {
+  // const jobs = useLoaderData<typeof JobLoader>();
 
-  const navigation = useNavigation();
-
-  if (navigation.state === 'loading') {
-    return <div>Loading...</div>;
-  }
-
-  return (
-    <Fragment>
-      {jobs.map((job) => (
-        <JobCard key={job.id} job={job} />
-      ))}
-    </Fragment>
-  );
+  return <Fragment>{jobs?.map((job: any) => <JobCard key={job.id} job={job} />)}</Fragment>;
 }
 
 export { JobList };
