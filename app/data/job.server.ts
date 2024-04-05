@@ -7,6 +7,7 @@ async function getJobs() {
   } catch (error) {
     console.log(error);
   }
+  return null;
 }
 async function createJob(formData: any) {
   try {
