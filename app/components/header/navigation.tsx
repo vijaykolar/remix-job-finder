@@ -14,20 +14,10 @@ export function Navigation(): JSX.Element {
               <NavLink
                 to={link.href}
                 className={({ isActive }: { isActive: boolean }) =>
-                  cn(
-                    'inline-flex',
-                    'h-14',
-                    'items-center',
-                    'border-b-2',
-                    'text-sm',
-                    'font-bold',
-                    {
-                      'text-primary hover:border-primary hover:text-primary border-primary':
-                        isActive,
-                      'text-gray-500 hover:border-primary hover:text-primary border-transparent':
-                        !isActive,
-                    }
-                  )
+                  cn('inline-flex', 'capitalize', 'h-14', 'font-semibold', 'items-center', 'border-b-2', 'text-sm', {
+                    'text-primary hover:border-primary hover:text-primary border-primary': isActive,
+                    'text-gray-500 hover:border-primary hover:text-primary border-transparent': !isActive,
+                  })
                 }
               >
                 {link.name}

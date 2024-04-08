@@ -2,10 +2,10 @@ import { LinkType } from './type';
 
 export const navigationLinks: LinkType[] = [
   { name: 'Dashboard', href: '/' },
-  { name: 'Jobs', href: '/jobs' },
+  { name: 'Job search', href: '/jobs' },
+  { name: 'talent', href: '/talent' },
+  { name: 'schedule', href: '/schedule' },
+  { name: 'events', href: '/calender' },
   { name: 'Components', href: '/components' },
-  { name: 'Team', href: '/team' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'Calendar', href: '/calender' },
-  { name: 'Reports', href: '/reports' },
+  // { name: 'Reports', href: '/reports' },
 ] as const;
