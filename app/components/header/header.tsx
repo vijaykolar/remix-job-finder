@@ -7,7 +7,7 @@ import { MobileNavigation } from './mobile-navigation';
 
 export function Header(): JSX.Element {
   return (
-    <header className="border-b border">
+    <header className="border-b border bg-white">
       <div className="container">
         <Disclosure as="nav">
           {({ open }) => (
@@ -44,12 +44,8 @@ export function Header(): JSX.Element {
                         />
                       </div>
                       <div className="ml-3">
-                        <div className="text-base font-medium text-gray-800">
-                          Tom Cook
-                        </div>
-                        <div className="text-sm font-medium text-gray-500">
-                          tom@example.com
-                        </div>
+                        <div className="text-base font-medium text-gray-800">Tom Cook</div>
+                        <div className="text-sm font-medium text-gray-500">tom@example.com</div>
                       </div>
                       <button
                         type="button"

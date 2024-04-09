@@ -8,11 +8,9 @@ const textFieldVariants = cva(
     variants: {
       variant: {
         default: 'border text-foreground text-sm border-transperant ',
-        secondary:
-          'bg-secondary text-secondary-foreground border-transperant hover:bg-secondary/90',
+        secondary: 'bg-secondary text-secondary-foreground border-transperant hover:bg-secondary/90',
         outline: 'text-foreground border',
-        desctructive:
-          'bg-destructive text-destructive-foreground border-transperant hover:bg-destructive/90',
+        desctructive: 'bg-destructive text-destructive-foreground border-transperant hover:bg-destructive/90',
       },
       size: {
         default: 'p-2',
@@ -40,21 +38,11 @@ interface TextFieldProps
 const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
   ({ variant, className, iconLeft, size, iconRight, ...props }, ref) => {
     return (
-      <div className="relative">
-        {iconLeft && (
-          <div className="absolute inset-y-0 left-0 text-gray-500 flex items-center pl-3">
-            {iconLeft}
-          </div>
-        )}
-        <input
-          ref={ref}
-          className={cn(textFieldVariants({ variant, size, className }))}
-          {...props}
-        />
+      <div className="relative w-full">
+        {iconLeft && <div className="absolute inset-y-0 left-0 text-gray-500 flex items-center pl-3">{iconLeft}</div>}
+        <input ref={ref} className={cn(textFieldVariants({ variant, size, className }))} {...props} />
         {iconRight && (
-          <div className="absolute inset-y-0  right-0 text-gray-500 flex items-center pr-3">
-            {iconRight}
-          </div>
+          <div className="absolute inset-y-0  right-0 text-gray-500 flex items-center pr-3">{iconRight}</div>
         )}
       </div>
     );
