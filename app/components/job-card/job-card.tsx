@@ -54,7 +54,10 @@ function JobCard({ job }: { job: any }) {
       <CardFooter className="flex justify-between mt-4">
         {/* <span>${formatSalary(salary)}/year</span> */}
         <span>$100-120k/year</span>
-        <Link className="bg-primary text-sm text-white rounded-md px-3 py-1" to={`/jobs/${job.id}`}>
+        <Link
+          className="bg-primary text-xs h-7 inline-flex items-center justify-center text-white rounded-md px-3 py-1"
+          to={`/jobs/${job.id}`}
+        >
           Apply now
         </Link>
       </CardFooter>
