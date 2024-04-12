@@ -53,6 +53,9 @@ export default function Index() {
         <div className="col-span-3">
           <div className="grid md:grid-cols-2 gap-4">
             <JobList jobs={jobs?.slice(0, 4)} />
+            <JobList jobs={jobs?.slice(0, 4)} />
+            <JobList jobs={jobs?.slice(0, 4)} />
+            <JobList jobs={jobs?.slice(0, 4)} />
           </div>
           <div>
             <Heading size="lg" className="mt-8 mb-4" weight="semibold">

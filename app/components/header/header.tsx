@@ -7,7 +7,7 @@ import { MobileNavigation } from './mobile-navigation';
 
 export function Header(): JSX.Element {
   return (
-    <header className="border-b border bg-white">
+    <header className="border-b border bg-white sticky z-10 top-0 left-0">
       <div className="container">
         <Disclosure as="nav">
           {({ open }) => (

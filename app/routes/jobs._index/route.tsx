@@ -1,7 +1,7 @@
 import { MetaFunction } from '@remix-run/node';
 import { useLoaderData, useNavigation } from '@remix-run/react';
 import { JobList } from '~/components/job-card';
-import { Card, CardContent } from '~/components/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '~/components/ui/card';
 import { getJobs } from '~/data/job.server';
 import { Header } from './header';
 import { BannerInfo } from './banner-info';
@@ -10,6 +10,7 @@ import { TextField } from '~/components/ui/textfield';
 import { BriefcaseIcon, ChevronDownIcon, MagnifyingGlassIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import { Button } from '~/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/components/ui/select';
+import { Heading } from '~/components/ui/heading';
 
 export const meta: MetaFunction = () => {
   return [{ title: 'Remix All Jobs' }, { name: 'description', content: 'Welcome to Remix!' }];
@@ -121,6 +122,100 @@ export default function Jobs() {
                 </div>
               </div>
             </form>
+          </div>
+
+          <div className="grid grid-cols-12 gap-5 mt-4">
+            <div className="col-span-3">
+              <Card>
+                <CardHeader className="pb-1">
+                  <CardTitle className="font-semibold">Create Job Alert</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>Increase an opportunity to get chance for new jobs. </CardDescription>
+                </CardContent>
+                <CardFooter>
+                  <form className="w-full">
+                    <TextField placeholder="Type your email" className="block px-4" size="sm" />
+                    <Button
+                      variant="outline"
+                      className="w-full mt-2 text-primary border-primary bg-transparent hover:text-primary/90 hover:border-primary/90 hover:bg-transparent"
+                    >
+                      Create Job Alert
+                    </Button>
+                  </form>
+                </CardFooter>
+              </Card>
+              <div className="space-y-3 mt-4">
+                <div>
+                  <Heading weight="semibold" className="text-slate-900">
+                    Type Of Employment
+                  </Heading>
+                  <ul>
+                    <li>
+                      <input type="checkbox" />
+                      <label>full time</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" />
+                      <label>full time</label>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <Heading weight="semibold" className="text-slate-900">
+                    Experience Level
+                  </Heading>
+                  <ul>
+                    <li>
+                      <input type="checkbox" />
+                      <label>full time</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" />
+                      <label>full time</label>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <Heading weight="semibold" className="text-slate-900">
+                    Salary Range
+                  </Heading>
+                  <ul>
+                    <li>
+                      <input type="checkbox" />
+                      <label>full time</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" />
+                      <label>full time</label>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <Heading weight="semibold" className="text-slate-900">
+                    Loaction
+                  </Heading>
+                  <ul>
+                    <li>
+                      <input type="checkbox" />
+                      <label>full time</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" />
+                      <label>full time</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="col-span-9">
+              <div className="space-y-4">
+                <JobList jobs={jobs} />
+                <JobList jobs={jobs} />
+                <JobList jobs={jobs} />
+                <JobList jobs={jobs} />
+              </div>
+            </div>
           </div>
         </div>
       </section>
