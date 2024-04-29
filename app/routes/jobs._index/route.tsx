@@ -11,6 +11,7 @@ import { BriefcaseIcon, ChevronDownIcon, MagnifyingGlassIcon, MapPinIcon } from 
 import { Button } from '~/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '~/components/ui/select';
 import { Heading } from '~/components/ui/heading';
+import { Checkbox } from '~/components/ui/checkbox';
 
 export const meta: MetaFunction = () => {
   return [{ title: 'Remix All Jobs' }, { name: 'description', content: 'Welcome to Remix!' }];
@@ -152,8 +153,8 @@ export default function Jobs() {
                   </Heading>
                   <ul>
                     <li>
-                      <input type="checkbox" />
-                      <label>full time</label>
+                      <Checkbox id="111" />
+                      <label htmlFor="111">full time</label>
                     </li>
                     <li>
                       <input type="checkbox" />
