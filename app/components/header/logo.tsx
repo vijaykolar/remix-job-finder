@@ -1,4 +1,6 @@
-export function Logo(): JSX.Element {
+import { ReactNode } from 'react';
+
+export function Logo(): ReactNode {
   return (
     <div className="flex flex-shrink-0 items-center h-10 w-10">
       <img

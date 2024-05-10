@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';`12`
 import { Disclosure } from '@headlessui/react';
 import { Logo } from './logo';
 import { Navigation } from './navigation';
@@ -5,7 +6,7 @@ import { Bars3Icon, XMarkIcon, BellIcon } from '@heroicons/react/24/outline';
 import { RightMenu } from './right-menu';
 import { MobileNavigation } from './mobile-navigation';
 
-export function Header(): JSX.Element {
+export function Header(): ReactNode {
   return (
     <header className="border-b border bg-white sticky z-10 top-0 left-0">
       <div className="container">
